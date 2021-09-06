@@ -179,3 +179,8 @@ body {
     color: grey;
     font-weight:400;
 }
+
+.to-login {
+    font-size: medium;
+    font-weight: bold;
+}
