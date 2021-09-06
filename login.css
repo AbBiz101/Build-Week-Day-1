@@ -85,6 +85,7 @@ body {
 .signup-btn {
     width: 100%;
     border-radius: 30px;
+    border: 2px solid
 }
 
 .rem-label {
@@ -153,7 +154,7 @@ body {
     background-color: white;
     height: 15px;
     width: 60px;
-    margin-top: -6px;
+    margin-top: -2px;
     margin-left: -35px;
     z-index: 1;
 }
@@ -169,3 +170,12 @@ body {
     z-index: 1;
     
 } */
+
+.pass-n-mail {
+    font-weight: bold;
+}
+
+.pass-n-mail1 {
+    color: grey;
+    font-weight:400;
+}
