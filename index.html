@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="./images/favicon.ico" sizes="32x32" />
     <title>Spotify</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
      <style>
         body {
             margin: 0;
@@ -49,31 +50,64 @@
             width: 100%;
 
         }
+        .songs, .menu{
+            height:100vh;
+        }
+        .songs{
+            background-color: rgb(27, 26, 27);
+        }
+        .menu{
+            background-color: rgb(8, 8, 8)
+        }
+        footer {
+            height: 50px;
+            background-color: black;
+            position:absolute;
+            bottom: 0px;
+            width: 100vh;
+        }
 
     </style>
 
   </head>
   <body>
-      
-      <div class="main-body">
-
-            <div id='app-container'>
+<!-- 
+    <div id='app-container'>
         <div id='main'>
-            <div id='menu'> 
+            <div id='menu' > 
                 I am the menu
             </div>
             <div id='songs'> 
                 I am the songs
             </div>
         </div>
-        <div id='player'>
-            I am the player
-        </div>
+    </div>
 
-      
+    <div id='player'>
+        I am the player
+    </div>
+-->
+    <div class="container-fluid main-body">
+        <div class="row">
+            <div class="menu col-12 col-sm-3 pt-2">
+                <img src="./images/Spotify_Logo_CMYK_Black.png" width="100">
+                <i class="bi bi-house-door-fill "></i>
+                <i class="bi bi-house-door"></i>
+                <i class="bi bi-search"></i>
+            </div>
+            <div class="songs col-12 col-sm-9">   
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellendus voluptas modi deserunt architecto id, ipsam pariatur dolor perferendis labore, inventore quod earum facilis atque omnis! Quia sapiente doloribus illum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellendus voluptas modi deserunt architecto id, ipsam pariatur dolor perferendis labore, inventore quod earum facilis atque omnis! Quia sapiente doloribus illum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellendus voluptas modi deserunt architecto id, ipsam pariatur dolor perferendis labore, inventore quod earum facilis atque omnis! Quia sapiente doloribus illum.
+            </div>
+        </div>
+    </div>
+    <footer class="col-12">
+        text
+    </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
   </body>
 </html>
