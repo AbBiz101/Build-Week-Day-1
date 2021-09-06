@@ -95,6 +95,10 @@ body {
     border-radius: 30px;
     border: 2px solid;
     height: 46px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: small;
+    
 }
 
 .rem-label {
@@ -110,7 +114,7 @@ body {
     border-color: #15883e;
     letter-spacing: 1px;
     font-weight: bold;
-    padding-left: 10px;
+    padding-left: 0px;
     padding-right: 0px;
     font-size: 14px;
     
@@ -122,11 +126,11 @@ body {
 }
 
 .remember-me {
-    padding-top: 0px;
-    margin-top: 13px;
+    padding-top: 10px;
+    /* margin-top: 13px; */
     margin-bottom: -5px;
     padding-left: 0;
-    padding-right: 15px;
+    padding-right: 17px;
 }
 
 .fb {
@@ -164,7 +168,7 @@ body {
     font-weight: 600;
     /* letter-spacing: 1px; */
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .or {
@@ -207,6 +211,12 @@ body {
 .pass-n-mail {
     font-weight: bold;
     line-height: 1;
+    color: black;
+}
+
+.input-text {
+    color: black;
+    font-weight: 400;
 }
 
 .pass-n-mail1 {
