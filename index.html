@@ -55,9 +55,11 @@
         }
         .songs{
             background-color: rgb(27, 26, 27);
+            color:#8F8F8F
         }
         .menu{
-            background-color: rgb(8, 8, 8)
+            background-color: rgb(10, 10, 10);
+            color:#7A7C74
         }
         footer {
             height: 50px;
@@ -66,7 +68,9 @@
             bottom: 0px;
             width: 100vh;
         }
-
+        .menu ul li {
+            list-style-type:none ;
+        }
     </style>
 
   </head>
@@ -90,10 +94,40 @@
     <div class="container-fluid main-body">
         <div class="row">
             <div class="menu col-12 col-sm-3 pt-2">
-                <img src="./images/Spotify_Logo_CMYK_Black.png" width="100">
-                <i class="bi bi-house-door-fill "></i>
-                <i class="bi bi-house-door"></i>
-                <i class="bi bi-search"></i>
+                <img src="./images/Spotify_Logo_CMYK_Black.png" width="100" class="mt-2 mb-4">
+                <ul class="list-group">
+                    <li class="list-item">
+                    <i class="bi bi-house-door-fill "><a class="text-muted ml-2">Home</a></i>
+                    </li>
+
+                    <li class="list-item">
+                    <i class="bi bi-search"><a class="text-muted ml-2">Search</a></i>
+                    </li>
+
+
+                    <li class="list-item">
+                    <i class="bi bi-bookshelf"><a class="text-muted ml-2">Your Library</a></i>
+                    </li>
+
+
+                    <li class="list-item">
+                    <i class="bi bi-plus-square"><a class="text-muted ml-2">Create Playlist</a></i>
+                    </li>
+
+
+                    <li class="list-item">
+                    <i class="bi bi-bookmark-heart"><a class="text-muted ml-2">Liked songs</a></i>
+                    </li>
+                </ul>
+                <ul>
+                    <li><a class="text-muted">Funky Heavy Bluesy</a></li>
+                    <li><a class="text-muted">Your Top Songs 2020</a></li>
+                    <li><a class="text-muted">In Love With You-</a></li>
+                    <li><a class="text-muted">This is Rod Stewart</a></li>
+                    <li><a class="text-muted">Your Top Songs 2019</a></li>
+                    <li><a class="text-muted">Jun 19</a></li>
+                </ul>
+               
             </div>
             <div class="songs col-12 col-sm-9">   
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellendus voluptas modi deserunt architecto id, ipsam pariatur dolor perferendis labore, inventore quod earum facilis atque omnis! Quia sapiente doloribus illum.
