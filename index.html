@@ -1,148 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="icon" type="image/png" href="./images/favicon.ico" sizes="32x32" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon.ico"
+      sizes="32x32"
+    />
     <title>Spotify</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-     <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+      .songs,
+      .menu {
+        height: 92vh;
+      }
 
-        #app-container {
-            min-height: 100vh;
-            width: 100%;
-        }
+      .songs {
+        background-color: rgb(27, 26, 27);
+        color: #8f8f8f;
+      }
 
-        #main {
-            display: flex;
-            min-height: 100vh;
-        }
-
-        #menu {
-            min-width: 230px;
-            width: 230px;
-            background-color: #030303;
-            color: white;
-        }
-
-        #songs {
-            background-color: #121212;
-            flex-grow: 1;
-            padding-bottom: 30px;
-            overflow: hidden;
-            color: white;
-        }
-
-        #player {
-            height: 90px;
-            background-color: #282828;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            z-index: 100;
-            line-height: 90px;
-            text-align: center;
-            width: 100%;
-
-        }
-        .songs, .menu{
-            height:100vh;
-        }
-        .songs{
-            background-color: rgb(27, 26, 27);
-            color:#8F8F8F
-        }
-        .menu{
-            background-color: rgb(10, 10, 10);
-            color:#7A7C74
-        }
-        footer {
-            height: 50px;
-            background-color: black;
-            position:absolute;
-            bottom: 0px;
-            width: 100vh;
-        }
-        .menu ul li {
-            list-style-type:none ;
-            margin-top: 4px;
-        }
+      .menu {
+        background-color: rgb(10, 10, 10);
+        color: #7a7c74;
+      }
+      .fixed-height {
+        background-image: url("https://s.abcnews.com/images/Entertainment/WireAP_90b2d91fff4e44bbb13f2a5aad5d5544_16x9_992.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 200px;
+        background-position: 0% 0%;
+      }
+      .menu ul li {
+        list-style-type: none;
+        margin-top: 4px;
+      }
+      .now-playing {
+        background-color: #191919;
+        color: #ffefff;
+        height: 8vh;
+      }
     </style>
-
   </head>
+
   <body>
-<!-- 
-    <div id='app-container'>
-        <div id='main'>
-            <div id='menu' > 
-                I am the menu
-            </div>
-            <div id='songs'> 
-                I am the songs
-            </div>
-        </div>
-    </div>
-
-    <div id='player'>
-        I am the player
-    </div>
--->
     <div class="container-fluid main-body">
-        <div class="row">
-            <div class="menu col-12 col-sm-3 pt-2 ml-0">
-                <img src="./images/Spotify_Logo_CMYK_Black.png" width="100" class="mt-2 mb-4">
-                <ul class="list-group">
-                    <li class="list-item">
-                    <i class="bi bi-house-door-fill "><a class="text-muted ml-2">Home</a></i>
-                    </li>
-
-                    <li class="list-item">
-                    <i class="bi bi-search"><a class="text-muted ml-2">Search</a></i>
-                    </li>
-
-
-                    <li class="list-item">
-                    <i class="bi bi-bookshelf"><a class="text-muted ml-2">Your Library</a></i>
-                    </li>
-
-
-                    <li class="list-item">
-                    <i class="bi bi-plus-square"><a class="text-muted ml-2">Create Playlist</a></i>
-                    </li>
-
-
-                    <li class="list-item">
-                    <i class="bi bi-bookmark-heart"><a class="text-muted ml-2">Liked songs</a></i>
-                    </li>
-                </ul>
-                <ul class="list-group mt-2">
-                    <li><a class="text-muted">Funky Heavy Bluesy</a></li>
-                    <li><a class="text-muted">Your Top Songs 2020</a></li>
-                    <li><a class="text-muted">In Love With You-</a></li>
-                    <li><a class="text-muted">This is Rod Stewart</a></li>
-                    <li><a class="text-muted">Your Top Songs 2019</a></li>
-                    <li><a class="text-muted">Jun 19</a></li>
-                </ul>
-               
-            </div>
-            <div class="songs col-12 col-sm-9">   
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellendus voluptas modi deserunt architecto id, ipsam pariatur dolor perferendis labore, inventore quod earum facilis atque omnis! Quia sapiente doloribus illum.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellendus voluptas modi deserunt architecto id, ipsam pariatur dolor perferendis labore, inventore quod earum facilis atque omnis! Quia sapiente doloribus illum.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellendus voluptas modi deserunt architecto id, ipsam pariatur dolor perferendis labore, inventore quod earum facilis atque omnis! Quia sapiente doloribus illum.
-            </div>
+      <div class="row">
+        <div class="menu col-12 col-sm-3 pt-2 ml-0">
+          <img
+            src="./images/Spotify_Logo_CMYK_Black.png"
+            width="100"
+            class="mt-2 mb-4"
+          />
+          <ul class="list-group">
+            <li class="list-item">
+              <i class="bi bi-house-door-fill"
+                ><a class="text-muted ml-2">Home</a></i
+              >
+            </li>
+            <li class="list-item">
+              <i class="bi bi-search"><a class="text-muted ml-2">Search</a></i>
+            </li>
+            <li class="list-item">
+              <i class="bi bi-bookshelf"
+                ><a class="text-muted ml-2">Your Library</a></i
+              >
+            </li>
+            <li class="list-item">
+              <i class="bi bi-plus-square"
+                ><a class="text-muted ml-2">Create Playlist</a></i
+              >
+            </li>
+            <li class="list-item">
+              <i class="bi bi-bookmark-heart"
+                ><a class="text-muted ml-2">Liked songs</a></i
+              >
+            </li>
+          </ul>
+          <ul class="list-group mt-2">
+            <li><a class="text-muted mb-2">Funky Heavy Bluesy</a></li>
+            <li><a class="text-muted mb-2">Your Top Songs 2020</a></li>
+            <li><a class="text-muted mb-2">In Love With You-</a></li>
+            <li><a class="text-muted mb-2">This is Rod Stewart</a></li>
+            <li><a class="text-muted mb-2">Your Top Songs 2019</a></li>
+            <li><a class="text-muted mb-2">Jun 19</a></li>
+            <li><a class="text-muted mb-2">Funky Heavy Bluesy</a></li>
+            <li><a class="text-muted mb-2">Your Top Songs 2020</a></li>
+            <li><a class="text-muted mb-2">In Love With You-</a></li>
+            <li><a class="text-muted mb-2">This is Rod Stewart</a></li>
+            <li><a class="text-muted mb-2">Your Top Songs 2019</a></li>
+            <li><a class="text-muted mb-2">Jun 19</a></li>
+            <li><a class="text-muted mb-2">Funky Heavy Bluesy</a></li>
+            <li><a class="text-muted mb-2">Your Top Songs 2020</a></li>
+            <li><a class="text-muted mb-2">In Love With You-</a></li>
+            <li><a class="text-muted mb-2">This is Rod Stewart</a></li>
+            <li>
+              <a class="text-muted"
+                ><i class="bi bi-plus-circle-dotted mr-2"></i>Instal App</a
+              >
+            </li>
+          </ul>
         </div>
+        <div class="songs col-12 col-sm-9 p-0">
+          <div class="fixed-height"></div>
+          <div></div>
+        </div>
+      </div>
     </div>
-    <footer class="col-12">
-        text
-    </footer>
 
+    <nav class="navbar fixed-bottom now-playing">now playing</nav>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
