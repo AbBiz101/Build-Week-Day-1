@@ -6,15 +6,70 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="icon" type="image/png" href="./images/favicon.ico" sizes="32x32" />
     <title>Spotify</title>
+     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #app-container {
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        #main {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        #menu {
+            min-width: 230px;
+            width: 230px;
+            background-color: #030303;
+            color: white;
+        }
+
+        #songs {
+            background-color: #121212;
+            flex-grow: 1;
+            padding-bottom: 30px;
+            overflow: hidden;
+            color: white;
+        }
+
+        #player {
+            height: 90px;
+            background-color: #282828;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            z-index: 100;
+            line-height: 90px;
+            text-align: center;
+            width: 100%;
+
+        }
+
+    </style>
 
   </head>
   <body>
+      
       <div class="main-body">
-          <class class="row">
-              <class class="col-6 col-sm-4 col-md-2"></class>
-              <class class="col-6 col-sm-8 col-md-10"></class>
-          </class>
-      </div>
+
+            <div id='app-container'>
+        <div id='main'>
+            <div id='menu'> 
+                I am the menu
+            </div>
+            <div id='songs'> 
+                I am the songs
+            </div>
+        </div>
+        <div id='player'>
+            I am the player
+        </div>
+
       
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
