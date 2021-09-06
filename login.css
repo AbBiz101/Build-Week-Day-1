@@ -1,0 +1,107 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    min-height: 6vh;
+    background-color: black;
+}
+
+.icon {
+    position: absolute;
+    margin-left: 45%;
+    padding-top: 17px;
+    
+    height: 60px;
+}
+.icon1 {
+    margin-top: 18px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 580px;
+}
+
+
+.btn-primary1 {
+    background-color: rgb(17, 87, 179);
+    color: white;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.btn-primary2 {
+    background-color: rgb(1, 5, 12);
+    color: white;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.btn-primary3{
+    background-color: white;
+    width: 100%;
+    color: grey;
+    border-radius: 30px;
+    border: 2px solid grey;
+    border-color: grey;
+
+}
+
+.header-icon {
+    min-height: 8vh;
+}
+
+.container-fluid {
+    min-height: 30vh;
+}
+
+.divider {
+    border-top: 1px solid #d9dadc;
+    display: block;
+    line-height: 1px;
+    margin: 15px 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.form-check-input {
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+.signup-btn {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.rem-label {
+    margin-left: 18px;
+}
+
+.log-in {
+    position: absolute;
+    margin-left: 125px;
+    width: 150px;
+    background-color: #15883e;
+    border-radius: 30px;
+    border-color: #15883e;
+}
+
+.apple {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 120px;
+}
+
+.fb {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 120px;
+}
+
+.google {
+   
+  
+   
+}
