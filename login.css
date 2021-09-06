@@ -41,6 +41,11 @@ body {
     
 }
 
+.btn-primary1:hover {
+    background-color: #2d67e2;
+    color: white;
+}
+
 .btn-primary2 {
     background-color: rgb(1, 5, 12);
     color: white;
@@ -50,6 +55,11 @@ body {
     font-size: 15px;
     font-weight: bold;
     height: 50px;
+}
+
+.btn-primary2:hover {
+    background-color: rgb(49, 49, 49);
+    color: white;
 }
 
 .btn-primary3{
@@ -62,7 +72,11 @@ body {
     font-size: 15px;
     font-weight: bold;
     height: 50px;
+}
 
+.btn-primary3:hover {
+    background-color: #616467;
+    color: white;
 }
 
 .res {
@@ -97,8 +111,12 @@ body {
     height: 46px;
     letter-spacing: 2px;
     font-weight: bold;
-    font-size: small;
-    
+    font-size: small;    
+}
+
+.signup-btn:hover {
+    background-color: #616467;
+    color: white;
 }
 
 .rem-label {
@@ -111,12 +129,17 @@ body {
     height: 50px;
     background-color: #15883e;
     border-radius: 30px;
-    border-color: #15883e;
+    border-color: #148b3e;
     letter-spacing: 1px;
     font-weight: bold;
     padding-left: 0px;
     padding-right: 0px;
     font-size: 14px;
+    
+}
+
+.log-in:hover {
+    background-color: #0daa44
     
 }
 
