@@ -8,19 +8,30 @@ body {
     background-color: black;
 }
 
+.header-icon {
+    min-height: 11vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .icon {
     position: absolute;
-    margin-left: 45%;
-    padding-top: 17px;
+    margin-left: 40%;
+    margin-top: 7px;
     
-    height: 60px;
+    height: 65px;
 }
-.icon1 {
-    margin-top: 18px;
-    font-weight: bold;
-    font-size: 30px;
-    margin-left: 580px;
-}
+
+/* .icon::before {
+    content: "1";
+    position: absolute;
+    background-color: black;
+    color:black;
+    height: 300px;
+    z-index: 10;
+    margin-top: 200px;
+} */
+
 
 
 .btn-primary1 {
@@ -28,6 +39,7 @@ body {
     color: white;
     width: 100%;
     border-radius: 30px;
+    letter-spacing: 1px;
 }
 
 .btn-primary2 {
@@ -35,6 +47,7 @@ body {
     color: white;
     width: 100%;
     border-radius: 30px;
+    letter-spacing: 1px;
 }
 
 .btn-primary3{
@@ -43,13 +56,11 @@ body {
     color: grey;
     border-radius: 30px;
     border: 2px solid grey;
-    border-color: grey;
+    letter-spacing: 1px;
 
 }
 
-.header-icon {
-    min-height: 8vh;
-}
+
 
 .container-fluid {
     min-height: 30vh;
@@ -68,11 +79,13 @@ body {
 .form-check-input {
     padding-left: 0px;
     margin-left: 0px;
+    color: green;
 }
 
 .signup-btn {
     width: 100%;
     border-radius: 30px;
+    border: 2px solid
 }
 
 .rem-label {
@@ -81,27 +94,93 @@ body {
 
 .log-in {
     position: absolute;
-    margin-left: 125px;
-    width: 150px;
+    margin-left: 175px;
+    width: 200px;
+    height: 50px;
     background-color: #15883e;
     border-radius: 30px;
     border-color: #15883e;
+    letter-spacing: 1px;
 }
 
 .apple {
     position: absolute;
-    margin-top: 10px;
-    margin-left: 120px;
+    margin-top: 12px;
+    margin-left: 100px;
+    font-weight: 100;
 }
 
 .fb {
     position: absolute;
-    margin-top: 10px;
-    margin-left: 120px;
+    margin-top: 12px;
+    margin-left: 80px;
 }
 
 .google {
+    position: absolute;
+    z-index: 1;
+    margin-top: 15px;
+    margin-left: -155px;
    
-  
+}
+
+.forgot-pass {
+    text-decoration: underline;
+    color: grey;
+}
+
+.dont-have-acc {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.or {
+    /* content: "";
+    position: absolute; 
+    background-color: black;
+    height: 10px;
+    width: 5px;
+    margin-top: 200px; */
+    font-size: 12px;
+    color: black;
+    z-index: 3;
    
+    
+}
+
+.or::before {
+    content: "OR";
+    position: absolute; 
+    background-color: white;
+    height: 15px;
+    width: 60px;
+    margin-top: -2px;
+    margin-left: -35px;
+    z-index: 1;
+}
+
+/* .or::after {
+    content: "";
+    position: absolute; 
+    background-color: white;
+    height: 15px;
+    width: 40px;
+    margin-top: -6px;
+    margin-left: -48px;
+    z-index: 1;
+    
+} */
+
+.pass-n-mail {
+    font-weight: bold;
+}
+
+.pass-n-mail1 {
+    color: grey;
+    font-weight:400;
+}
+
+.to-login {
+    font-size: medium;
+    font-weight: bold;
 }
