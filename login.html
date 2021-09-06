@@ -9,11 +9,10 @@
     <title>Spotify</title>
 </head>
 <body>
-    <div class="nav"></div>
+    <!-- <div class="nav"></div> -->
      
     <div class='header-icon'>
         <img class='icon' src="spotify.png"/>
-        <span class='icon1 d-inline-block'></span>
     </div>
 
 <hr>
@@ -56,9 +55,11 @@
             </div>   
 
             <div class="row justify-content-center">
-                <div class="col-5 col-md-6 col-lg-5 col-xl-5">
+                <div class="col-5 col-md-6 col-lg-5 col-xl-5 ">
                     <div class='divider'>
-                        <strong>OR</strong>
+                        <div>
+                        <strong class=or ">OR</strong>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -77,41 +78,42 @@
                     <input type="password" class="form-control" id="exampleInputPassword1">
                     </div>
                 </form>
-                <form class='row justify-content-center'>
+                <div class="row justify-content-center">
+                <div class='col-5'>
+                    <h6 class='forgot-pass'>Forgot your password?</h6>
+                </div>
+                </div>
+                <form class='row justify-content-center mt-5'>
                     <div class="col-5 form-group form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
                     <label class="form-check-label rem-label" for="exampleCheck1">Remember me</label>
-                    <button type="submit" class="btn btn-primary log-in">Log in</button>
+                    <button type="submit" class="btn btn-primary log-in">LOG IN</button>
                     </div>
                 </form>
-                <!-- <form class='row justify-content-center'>
-                    <div class="col-5 form-group">
-                    <button type="submit" class="btn btn-primary log-in">Log in</button>
-                    </div>
-                </form> -->
-            </div>
-            </div>
+               
+             </div>
+             </div>
 
              <div id="sign-up-section">
 
                  <div class="row justify-content-center">
                     <div class="col-5 col-md-6 col-lg-5 col-xl-5">
                         <div class='divider'>
-                            <strong>OR</strong>
+                            <!-- <strong>OR</strong> -->
                         </div>
                     </div>
                  </div>
                  <div class="row justify-content-center">
                     <div class="col-5 col-md-6 col-lg-5 col-xl-5">
                         <div>
-                            <h5>Don't have an account?</h5>
+                            <h5 class="text-center my-4 dont-have-acc">Don't have an account?</h5>
                         </div>
                     </div>
                  </div>
-                 <div class="row justify-content-center">
+                 <div class="row justify-content-center mb-3">
                     <div class="col-5 col-md-6 col-lg-5 col-xl-5">
                         <div>
-                            <button type="button" class="btn btn-outline-secondary signup-btn">SIGN UP FOR SPOTIFY</button>
+                            <button type="button" class="btn btn-outline-secondary signup-btn dont-have-acc ">SIGN UP FOR SPOTIFY</button>
                         </div>
                     </div>
                  </div>
