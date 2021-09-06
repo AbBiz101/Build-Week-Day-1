@@ -1,64 +1,148 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="./images/favicon.ico" sizes="32x32" />
+    <title>Spotify</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
 
-    <title>Hello, world!</title>
+        #app-container {
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        #main {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        #menu {
+            min-width: 230px;
+            width: 230px;
+            background-color: #030303;
+            color: white;
+        }
+
+        #songs {
+            background-color: #121212;
+            flex-grow: 1;
+            padding-bottom: 30px;
+            overflow: hidden;
+            color: white;
+        }
+
+        #player {
+            height: 90px;
+            background-color: #282828;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            z-index: 100;
+            line-height: 90px;
+            text-align: center;
+            width: 100%;
+
+        }
+        .songs, .menu{
+            height:100vh;
+        }
+        .songs{
+            background-color: rgb(27, 26, 27);
+            color:#8F8F8F
+        }
+        .menu{
+            background-color: rgb(10, 10, 10);
+            color:#7A7C74
+        }
+        footer {
+            height: 50px;
+            background-color: black;
+            position:absolute;
+            bottom: 0px;
+            width: 100vh;
+        }
+        .menu ul li {
+            list-style-type:none ;
+            margin-top: 4px;
+        }
+    </style>
+
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+<!-- 
+    <div id='app-container'>
+        <div id='main'>
+            <div id='menu' > 
+                I am the menu
+            </div>
+            <div id='songs'> 
+                I am the songs
+            </div>
         </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-    <h1>Hello, world!</h1>
+    </div>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <div id='player'>
+        I am the player
+    </div>
+-->
+    <div class="container-fluid main-body">
+        <div class="row">
+            <div class="menu col-12 col-sm-3 pt-2 ml-0">
+                <img src="./images/Spotify_Logo_CMYK_Black.png" width="100" class="mt-2 mb-4">
+                <ul class="list-group">
+                    <li class="list-item">
+                    <i class="bi bi-house-door-fill "><a class="text-muted ml-2">Home</a></i>
+                    </li>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+                    <li class="list-item">
+                    <i class="bi bi-search"><a class="text-muted ml-2">Search</a></i>
+                    </li>
+
+
+                    <li class="list-item">
+                    <i class="bi bi-bookshelf"><a class="text-muted ml-2">Your Library</a></i>
+                    </li>
+
+
+                    <li class="list-item">
+                    <i class="bi bi-plus-square"><a class="text-muted ml-2">Create Playlist</a></i>
+                    </li>
+
+
+                    <li class="list-item">
+                    <i class="bi bi-bookmark-heart"><a class="text-muted ml-2">Liked songs</a></i>
+                    </li>
+                </ul>
+                <ul class="list-group mt-2">
+                    <li><a class="text-muted">Funky Heavy Bluesy</a></li>
+                    <li><a class="text-muted">Your Top Songs 2020</a></li>
+                    <li><a class="text-muted">In Love With You-</a></li>
+                    <li><a class="text-muted">This is Rod Stewart</a></li>
+                    <li><a class="text-muted">Your Top Songs 2019</a></li>
+                    <li><a class="text-muted">Jun 19</a></li>
+                </ul>
+               
+            </div>
+            <div class="songs col-12 col-sm-9">   
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellendus voluptas modi deserunt architecto id, ipsam pariatur dolor perferendis labore, inventore quod earum facilis atque omnis! Quia sapiente doloribus illum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellendus voluptas modi deserunt architecto id, ipsam pariatur dolor perferendis labore, inventore quod earum facilis atque omnis! Quia sapiente doloribus illum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis repellendus voluptas modi deserunt architecto id, ipsam pariatur dolor perferendis labore, inventore quod earum facilis atque omnis! Quia sapiente doloribus illum.
+            </div>
+        </div>
+    </div>
+    <footer class="col-12">
+        text
+    </footer>
+
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
