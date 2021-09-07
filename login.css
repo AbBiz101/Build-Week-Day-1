@@ -154,6 +154,7 @@ body {
     margin-bottom: -5px;
     padding-left: 0;
     padding-right: 17px;
+    cursor: pointer;
 }
 
 .fb {
@@ -185,6 +186,12 @@ body {
 .forgot-pass {
     text-decoration: underline;
     color: grey;
+    cursor: pointer;
+}
+
+.forgot-pass:hover {
+    color: #1ab651
+    
 }
 
 .dont-have-acc {
@@ -245,6 +252,7 @@ body {
 .pass-n-mail1 {
     color: grey;
     font-weight:400;
+    cursor: pointer;
 }
 
 .to-login {
