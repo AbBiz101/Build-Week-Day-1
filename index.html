@@ -1,180 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="./images/favicon.ico"
-      sizes="32x32"
-    />
-    <title>Spotify</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-    />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: black;
-      }
 
-      .songs,
-      .menu {
-        height: 85vh;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" href="./images/favicon.ico" sizes="32x32" />
+  <title>Spotify</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      background-color: rgb(2, 2, 2);
+    }
 
-      .songs {
-        background-color: rgb(27, 26, 27);
-        color: #8f8f8f;
-      }
+    .songs,
+    .menu {}
 
-      .menu {
-        background-color: rgb(10, 10, 10);
-        color: #7a7c74;
-      }
+    .songs {
+      background-color: rgb(0, 0, 0);
+      color: #8f8f8f;
 
-      .fixed-height {
-        background-image: url("https://s.abcnews.com/images/Entertainment/WireAP_90b2d91fff4e44bbb13f2a5aad5d5544_16x9_992.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 300px;
-        position: relative;
-        background-position: 0% 0%;
-      }
+    }
 
-      .menu ul li {
-        list-style-type: none;
-        margin-top: 4px;
-      }
+    .menu {
+      background-color: rgb(0, 0, 0);
+      color: #7a7c74;
+      margin: 0px;
+      padding: 0px;
+      max-height: 100vh;
+    }
 
-      .now-playing {
-        background-color: #191919;
-        color: #ffefff;
-        height: 15vh;
-      }
+    .fixed-height {
+      background-image: url("https://s.abcnews.com/images/Entertainment/WireAP_90b2d91fff4e44bbb13f2a5aad5d5544_16x9_992.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 300px;
+      position: relative;
+      background-position: 0% 0%;
+    }
 
-      .navbar div h4 {
-        font-size: x-small;
-      }
+    .menu ul li {
+      list-style-type: none;
+      margin-top: 4px;
+    }
 
-      .navbar div h5 {
-        font-size: xx-small;
-      }
-      .dropdown {
-        position: absolute;
-        border-radius: 20px;
-        margin-top: 18px;
-        margin-left: 480px;
-      }
-    </style>
-  </head>
+    .now-playing {
+      background-color: #e41f1f;
+      color: #ffefff;
+      height: 12vh;
+    }
 
-  <body>
-    <div class="container-fluid main-body">
-      <div class="row">
-        <div class="menu col-12 col-sm-3 pt-2 ml-0">
-          <img
-            src="./images/Spotify_Logo_CMYK_Black.png"
-            width="100"
-            class="mt-2 mb-4"
-          />
+    .navbar div h4 {
+      font-size: x-small;
+    }
+
+    .navbar div h5 {
+      font-size: xx-small;
+    }
+
+    .dropdown {
+      position: absolute;
+      border-radius: 20px;
+      margin-top: 18px;
+      margin-left: 480px;
+    }
+
+    .duration-btn {
+      position: absolute;
+      top: 50px;
+      left: 400px;
+    }
+
+    #duration-1 {
+      padding: 0px;
+      margin: 0px;
+      position: absolute;
+      top: 20px;
+      left: 50px;
+      width: 200px;
+    }
+
+    #duration-2 {
+      padding: 0px;
+      margin: 0px;
+      position: absolute;
+      top: 20px;
+      left: 150px;
+    }
+
+    .vol-btn {
+      position: relative;
+      padding: 0px;
+      margin: 0px;
+      top: -20px;
+    }
+
+    #vol-btn-1 {
+      position: absolute;
+      padding: 0px;
+      margin: 0px;
+      top: 20px;
+      right: 20px;
+    }
+
+    #vol-btn-2 {
+      position: absolute;
+      padding: 0px;
+      margin: 0px;
+      top: 20px;
+      right: 20px;
+    }
+
+    #vol-btn-3 {
+      position: absolute;
+      padding: 0px;
+      margin: 0px;
+      top: 20px;
+      right: 20px;
+    }
+
+    .duration-hr {
+      position: static;
+      border-radius: 4px;
+      background: linear-gradient(90deg, rgb(67, 68, 68) 62%, rgba(223, 230, 232, 1) 42%);
+      height: 5px;
+      width: 400px;
+      margin-right: 0px;
+      margin-top: 10px;
+    }
+
+    .volume-hr {
+      position: static;
+      border-radius: 4px;
+      background: linear-gradient(90deg, rgb(67, 68, 68) 75%, rgba(223, 230, 232, 1) 25%);
+      height: 5px;
+      width: 150px;
+      margin-top: -50px;
+      margin-left: 1080px;
+    }
+
+    .play-btn {
+      position: absolute;
+      padding: 0px;
+      margin: 0px;
+      top: 20px;
+      left: 600px;
+
+    }
+
+    ul.music-group-list {
+      overflow-y: scroll;
+      max-height: 53vh;
+    }
+
+    .list-group-item {
+      background-color: black;
+      font-style: normal;
+    }
+
+    .list-group-item a {
+      font-style: normal;
+    }
+
+    .divider {
+      border-top: 1px solid #767779;
+      display: block;
+      line-height: 2px;
+      margin: 0px;
+      position: relative;
+      text-align: center;
+      width: 100%;
+    }
+
+    .main {
+      margin: 0px;
+      padding: 0px;
+      height: 85vh;
+    }
+
+    ::-webkit-scrollbar {
+      width: 20px;
+    }
+
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px grey;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: black;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgb(54, 56, 58);
+    }
+    .instal-app{
+      z-index: 100;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid main-body">
+
+    <div class="main">
+      <div class="menu col-12 col-sm-2 pt-2 ml-0 sticky-top">
+        <img src="./images/Spotify_Logo_CMYK_Black.png" width="100" class="mt-2 mb-3" />
+
+        <div class="">
           <ul class="list-group">
-            <li class="list-item">
-              <i class="bi bi-house-door-fill"
-                ><a class="text-muted ml-2">Home</a></i
-              >
+            <li class="list-group-item ml-3 pt-2 p-0"> <i class="bi bi-house-door-fill"><a
+                  class="text-muted ml-2">Home</a></i>
             </li>
-            <li class="list-item">
-              <i class="bi bi-search"><a class="text-muted ml-2">Search</a></i>
+            <li class="list-group-item ml-3 pt-2 p-0"> <i class="bi bi-search"><a class="text-muted ml-2">Search</a></i>
             </li>
-            <li class="list-item">
-              <i class="bi bi-bookshelf"
-                ><a class="text-muted ml-2">Your Library</a></i
-              >
+            <li class="list-group-item ml-3 pt-2  p-0"> <i class="bi bi-bookshelf"><a class="text-muted ml-2">Your
+                  Library</a></i>
             </li>
-            <li class="list-item">
-              <i class="bi bi-plus-square"
-                ><a class="text-muted ml-2">Create Playlist</a></i
-              >
+            <li class="list-group-item ml-3  pt-4 p-0"> <i class="bi bi-plus-square"><a class="text-muted ml-2">Create
+                  Playlist</a></i>
             </li>
-            <li class="list-item">
-              <i class="bi bi-bookmark-heart"
-                ><a class="text-muted ml-2">Liked songs</a></i
-              >
-            </li>
-          </ul>
-          <ul class="list-group mt-2">
-            <li><a class="text-muted mb-2">Funky Heavy Bluesy</a></li>
-            <li><a class="text-muted mb-2">Your Top Songs 2020</a></li>
-            <li><a class="text-muted mb-2">In Love With You-</a></li>
-            <li><a class="text-muted mb-2">This is Rod Stewart</a></li>
-            <li><a class="text-muted mb-2">Your Top Songs 2019</a></li>
-            <li><a class="text-muted mb-2">Jun 19</a></li>
-            <li><a class="text-muted mb-2">Funky Heavy Bluesy</a></li>
-            <li><a class="text-muted mb-2">Your Top Songs 2020</a></li>
-            <li><a class="text-muted mb-2">In Love With You-</a></li>
-            <li><a class="text-muted mb-2">This is Rod Stewart</a></li>
-            <li><a class="text-muted mb-2">Your Top Songs 2019</a></li>
-            <li><a class="text-muted mb-2">Jun 19</a></li>
-            <li><a class="text-muted mb-2">Funky Heavy Bluesy</a></li>
-            <li><a class="text-muted mb-2">Your Top Songs 2020</a></li>
-            <li><a class="text-muted mb-2">In Love With You-</a></li>
-            <li><a class="text-muted mb-2">This is Rod Stewart</a></li>
-            <li>
-              <a class="text-muted"
-                ><i class="bi bi-plus-circle-dotted mr-2"></i>Instal App</a
-              >
+            <li class="list-group-item ml-3 pt-2  p-0"> <i class="bi bi-bookmark-heart"><a class="text-muted ml-2">Liked
+                  songs</a></i>
             </li>
           </ul>
         </div>
-        <div class="songs col-12 col-sm-9 p-0">
-          <div class="fixed-height">
-            <div class="dropdown">
-              <button
-                class="btn btn-dark dropdown-toggle btn-border p-0"
-                type="button"
-                id="dropdownMenuButton"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                <img src="./images/adult-1.png" width="25px" alt="" />
-                User Name Name
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Setting</a>
-                <a class="dropdown-item" href="#">Log Out</a>
+
+        <div class="row justify-content-center">
+          <div class="col-11 my-1 ">
+            <div class='divider'>
+              <div>
+                <strong class=""></strong>
               </div>
             </div>
           </div>
-          <div></div>
         </div>
+
+        <div>
+          <ul class="list-group music-group-list">
+            <li class="list-group-item"> <a class="text-muted mb-2">Funky Heavy Bluesy</a> </li>
+            <li class="list-group-item"> <a class="text-muted mb-2">Funky Heavy Bluesy</a> </li>
+            <li class="list-group-item"> <a class="text-muted mb-2">Your Top Songs 2020</a></li>
+            <li class="list-group-item"> <a class="text-muted mb-2">In Love With You-</a> </li>
+            <li class="list-group-item"> <a class="text-muted mb-2">This is Rod Stewart</a> </li>
+            <li class="list-group-item"> <a class="text-muted mb-2">Your Top Songs 2019</a></li>
+            <li class="list-group-item"> <a class="text-muted mb-2">Jun 19</a> </li>
+            <li class="list-group-item"> <a class="text-muted mb-2">Funky Heavy Bluesy</a> </li>
+            <li class="list-group-item"> <a class="text-muted mb-2">Your Top Songs 2020</a> </li>
+            <li class="list-group-item"> <a class="text-muted mb-2">In Love With You-</a></li>
+            <li class="list-group-item"> <a class="text-muted mb-2">This is Rod Stewart</a></li>
+            <li class="list-group-item"> <a class="text-muted mb-2">Your Top Songs 2019</a></li>
+            <li class="list-group-item"> <a class="text-muted mb-2">Jun 19</a> </li>
+            <li class="list-group-item"> <a class="text-muted mb-2">Funky Heavy Bluesy</a></li>
+            <li class="list-group-item"> <a class="text-muted mb-2">Your Top Songs 2020</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="list-group instal-app ">
+            <li class="list-group-item"> <i class="bi bi-plus-circle-dotted mr-2"></i>Instal App</a></i></li>
+          </ul>
+        </div>
+
+      </div>
+
+
+      <div class="songs col-12 col-sm-9 p-0">
+        <!-- <div class="fixed-height">
+          <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle btn-border p-0" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="./images/adult-1.png" width="25px" alt="" />
+              User Name Name
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Setting</a>
+              <a class="dropdown-item" href="#">Log Out</a>
+            </div>
+          </div>
+        </div> -->
+
+        <div> </div>
+
       </div>
     </div>
 
     <nav class="navbar fixed-bottom now-playing">
-      <div>
-        <img
-          src="./images/ab67616d0000b273056e90910cbaf5c5b892aeba.jfif"
-          width="35"
-        />
+
+      <div class="title-img">
+        <img src="./images/ab67616d0000b273056e90910cbaf5c5b892aeba.jfif" width="35" />
         <h4>Another One Bites The Dust-Remastered 2011</h4>
         <h5>Queen</h5>
         <i class="bi bi-heart"></i>
         <i class="bi bi-aspect-ratio"></i>
       </div>
+
+      <div class="play-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172"
+          style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#ffffff">
+              <path
+                d="M1.34375,52.40625c0,2.28438 1.74687,4.03125 4.03125,4.03125h34.13125c6.9875,0 13.4375,3.09062 17.87188,8.6c0.80625,0.94063 2.01563,1.47813 3.09062,1.47813c0.94063,0 1.74687,-0.26875 2.55313,-0.94062c1.74687,-1.34375 2.01562,-3.89688 0.67188,-5.64375c-5.9125,-7.39062 -14.78125,-11.55625 -24.1875,-11.55625h-34.13125c-2.28438,0 -4.03125,1.74687 -4.03125,4.03125zM147.94688,95.27188c-1.6125,-1.6125 -4.16563,-1.6125 -5.64375,0c-1.6125,1.6125 -1.6125,4.16562 0,5.64375l14.64687,14.64687h-37.89375c-6.9875,0 -13.4375,-3.09063 -17.87187,-8.6c-1.34375,-1.74687 -3.89688,-2.01562 -5.64375,-0.67187c-1.74687,1.34375 -2.01562,3.89688 -0.67187,5.64375c5.9125,7.39063 14.64688,11.55625 24.1875,11.55625h37.75937l-14.64687,14.64687c-1.6125,1.6125 -1.6125,4.16563 0,5.64375c0.80625,0.80625 1.88125,1.20937 2.82187,1.20937c0.94062,0 2.01563,-0.40312 2.82188,-1.20937l21.5,-21.5c1.6125,-1.6125 1.6125,-4.16562 0,-5.64375zM147.94688,28.08438c-1.6125,-1.6125 -4.16563,-1.6125 -5.64375,0c-1.6125,1.6125 -1.6125,4.16563 0,5.64375l14.64687,14.64688h-37.89375c-9.40625,0 -18.275,4.16562 -24.1875,11.55625l-37.625,47.03125c-4.3,5.50937 -10.88437,8.6 -17.87188,8.6h-33.99687c-2.28438,0 -4.03125,1.74688 -4.03125,4.03125c0,2.28437 1.74687,4.03125 4.03125,4.03125h34.53437h0.13438c9.27188,-0.13437 17.87187,-4.3 23.65,-11.55625l37.625,-47.03125c4.3,-5.50938 10.88437,-8.6 17.87187,-8.6h37.75938l-14.64688,14.64688c-1.6125,1.6125 -1.6125,4.16563 0,5.64375c0.80625,0.80625 1.88125,1.20938 2.82188,1.20938c0.94062,0 2.01563,-0.40313 2.82188,-1.20938l21.5,-21.5c1.6125,-1.6125 1.6125,-4.16563 0,-5.64375z">
+              </path>
+            </g>
+          </g>
+        </svg>
+
+        <svg id='prev-button' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
+          viewBox="0 0 172 172" style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#cccccc">
+              <path d="M61.92,75.16938v-44.20938h-27.52v110.08h27.52v-44.20937l72.24,47.11187v-115.89844z"></path>
+            </g>
+          </g>
+        </svg>
+
+        <svg id='play-button' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="35" height="40"
+          viewBox="0 0 172 172" style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#ffffff">
+              <path
+                d="M86,6.88c-43.62608,0 -79.12,35.49048 -79.12,79.12c0,43.62952 35.49392,79.12 79.12,79.12c43.62608,0 79.12,-35.49048 79.12,-79.12c0,-43.62952 -35.49392,-79.12 -79.12,-79.12zM62.06448,123.95696l-0.28552,-75.66624l65.50104,37.58544z">
+              </path>
+            </g>
+          </g>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172"
+          style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#cccccc">
+              <path d="M110.08,30.96v44.20938l-72.24,-47.12531v115.91187l72.24,-47.12531v44.20937h27.52v-110.08z">
+              </path>
+            </g>
+          </g>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172"
+          style=" fill:#000000;">
+          <g transform="">
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+              stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+              font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+              <path d="M0,172v-172h172v172z" fill="none"></path>
+              <g fill="#cccccc">
+                <path
+                  d="M105.2425,15.8025l-17.2,17.2l-4.945,4.8375l4.945,4.8375l17.2,17.2l9.675,-9.675l-5.4825,-5.4825h24.725c1.98875,0 3.44,1.45125 3.44,3.44v75.68c0,1.98875 -1.45125,3.44 -3.44,3.44h-41.28v13.76h41.28c9.41969,0 17.2,-7.78031 17.2,-17.2v-75.68c0,-9.41969 -7.78031,-17.2 -17.2,-17.2h-24.725l5.4825,-5.4825zM37.84,30.96c-9.41969,0 -17.2,7.78031 -17.2,17.2v75.68c0,9.41969 7.78031,17.2 17.2,17.2h24.725l-5.4825,5.4825l9.675,9.675l17.2,-17.2l4.945,-4.8375l-4.945,-4.8375l-17.2,-17.2l-9.675,9.675l5.4825,5.4825h-24.725c-1.98875,0 -3.44,-1.45125 -3.44,-3.44v-75.68c0,-1.98875 1.45125,-3.44 3.44,-3.44h41.28v-13.76z">
+                </path>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div class="vol-btn">
+        <svg id="vol-btn-1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
+          viewBox="0 0 172 172" style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#cccccc">
+              <path
+                d="M28.66667,21.5c-7.91917,0 -14.33333,6.41417 -14.33333,14.33333v78.83333c0,7.91917 6.41417,14.33333 14.33333,14.33333h50.16667v-14.33333h-43v-78.83333h121.83333c0,-7.91917 -6.41417,-14.33333 -14.33333,-14.33333zM107.5,50.16667c-7.91917,0 -14.33333,6.41417 -14.33333,14.33333v71.66667c0,7.91917 6.41417,14.33333 14.33333,14.33333h35.83333c7.91917,0 14.33333,-6.41417 14.33333,-14.33333v-71.66667c0,-7.91917 -6.41417,-14.33333 -14.33333,-14.33333zM107.5,64.5h35.83333v71.66667h-35.83333z">
+              </path>
+            </g>
+          </g>
+        </svg>
+
+        <svg id="vol-btn-2" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
+          viewBox="0 0 172 172" style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#cccccc">
+              <path
+                d="M6.88,10.32v13.76h158.24v-13.76zM6.88,44.72v13.76h99.76v-13.76zM126.9575,48.16c-0.33594,0.02688 -0.645,0.08063 -0.9675,0.215c-1.29,0.5375 -2.15,1.84094 -2.15,3.225v68.8c0,1.38406 0.86,2.70094 2.15,3.225c0.43,0.17469 0.84656,0.215 1.29,0.215c0.90031,0 1.81406,-0.30906 2.4725,-0.9675l34.4,-34.4c1.34375,-1.34375 1.34375,-3.60125 0,-4.945l-34.4,-34.4c-0.73906,-0.73906 -1.78719,-1.06156 -2.795,-0.9675zM6.88,79.12v13.76h99.76v-13.76zM6.88,113.52v13.76h99.76v-13.76zM6.88,147.92v13.76h158.24v-13.76z">
+              </path>
+            </g>
+          </g>
+        </svg>
+
+        <svg id="vol-btn-3" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
+          viewBox="0 0 172 172" style=" fill:#000000;">
+          <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
+            font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#cccccc">
+              <path
+                d="M91.53625,6.88c-2.29781,0 -4.48812,0.95406 -6.03344,2.63375l-42.28781,45.52625h-26.015c-5.65719,0 -10.32,4.66281 -10.32,10.32v41.28c0,5.65719 4.66281,10.32 10.32,10.32h26.015l42.28781,45.52625c1.54531,1.67969 3.73562,2.63375 6.03344,2.63375c4.50156,0 8.22375,-3.72219 8.22375,-8.22375v-141.7925c0,-4.50156 -3.72219,-8.22375 -8.22375,-8.22375zM91.53625,13.76c0.77938,0 1.34375,0.56438 1.34375,1.34375v141.7925c0,0.77938 -0.56437,1.34375 -1.34375,1.34375c-0.38969,0 -0.73906,-0.16125 -0.99437,-0.43l-42.38188,-45.63375v-52.3525l42.36844,-45.63375c0.26875,-0.28219 0.61813,-0.43 1.00781,-0.43zM136.55188,35.85125l-3.85656,5.68406c15.25156,8.96281 25.54469,25.51781 25.54469,44.46469c0,18.94688 -10.29312,35.50188 -25.54469,44.46469l3.85656,5.68406c17.07906,-10.2125 28.56812,-28.83687 28.56812,-50.14875c0,-21.31187 -11.48906,-39.93625 -28.56812,-50.14875zM124.95531,52.90344l-3.89688,5.72438c9.82281,5.20031 16.54156,15.50687 16.54156,27.37219c0,11.86531 -6.71875,22.17188 -16.54156,27.37219l3.89688,5.72438c11.63687,-6.47688 19.52469,-18.86625 19.52469,-33.09656c0,-14.23031 -7.88781,-26.61969 -19.52469,-33.09656zM17.2,61.92h24.08v48.16h-24.08c-1.92156,0 -3.44,-1.51844 -3.44,-3.44v-41.28c0,-1.92156 1.51844,-3.44 3.44,-3.44zM113.25125,70.13031l-4.01781,5.92594c4.43438,1.15563 7.72656,5.14656 7.72656,9.94375c0,4.79719 -3.29219,8.78813 -7.72656,9.94375l4.01781,5.92594c6.20813,-2.60687 10.58875,-8.73437 10.58875,-15.86969c0,-7.13531 -4.38062,-13.27625 -10.58875,-15.86969z">
+              </path>
+            </g>
+          </g>
+        </svg>
+
+      </div>
+
+      <hr class="volume-hr">
+
+      <hr class="duration-hr">
+
 
       <div>
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -201,15 +445,28 @@
       <i class="bi bi-volume-up-fill"></i><i class="bi bi-dash-lg"></i>
     </nav>
 
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
