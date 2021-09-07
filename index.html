@@ -16,8 +16,7 @@
       background-color: rgb(2, 2, 2);
     }
 
-    .songs,
-    .menu {}
+    
 
     .songs {
       background-color: rgb(0, 0, 0);
@@ -48,9 +47,10 @@
     }
 
     .now-playing {
-      background-color: #e41f1f;
+      background-color: #181818;
       color: #ffefff;
       height: 12vh;
+      position: relative;
     }
 
     .navbar div h4 {
@@ -102,50 +102,50 @@
       position: absolute;
       padding: 0px;
       margin: 0px;
-      top: 20px;
-      right: 20px;
+      top: 10px;
+      right: 210px;
     }
 
     #vol-btn-2 {
       position: absolute;
       padding: 0px;
       margin: 0px;
-      top: 20px;
-      right: 20px;
+      top: 10px;
+      right: 240px;
     }
 
     #vol-btn-3 {
       position: absolute;
       padding: 0px;
       margin: 0px;
-      top: 20px;
-      right: 20px;
+      top: 10px;
+      right: 180px;
     }
 
     .duration-hr {
-      position: static;
+      position: absolute;
       border-radius: 4px;
       background: linear-gradient(90deg, rgb(67, 68, 68) 62%, rgba(223, 230, 232, 1) 42%);
       height: 5px;
       width: 400px;
-      margin-right: 0px;
-      margin-top: 10px;
+      margin-left: 410px;
+      margin-top: 65px;
     }
 
     .volume-hr {
-      position: static;
       border-radius: 4px;
       background: linear-gradient(90deg, rgb(67, 68, 68) 75%, rgba(223, 230, 232, 1) 25%);
       height: 5px;
       width: 150px;
-      margin-top: -50px;
-      margin-left: 1080px;
+      position: absolute;
+      margin: -6px;
+      margin-left: 1050px;
     }
 
     .play-btn {
       position: absolute;
       padding: 0px;
-      margin: 0px;
+      margin: -7px;
       top: 20px;
       left: 600px;
 
@@ -179,9 +179,10 @@
       margin: 0px;
       padding: 0px;
       height: 85vh;
+      
     }
 
-    ::-webkit-scrollbar {
+    /* ::-webkit-scrollbar {
       width: 20px;
     }
 
@@ -197,10 +198,34 @@
 
     ::-webkit-scrollbar-thumb:hover {
       background: rgb(54, 56, 58);
-    }
+    } */
     .instal-app{
       z-index: 100;
     }
+
+    #play-controls {
+      margin-left: -80px;
+    }
+
+    .volume-controls {
+      position: relative;
+    }
+
+    span{
+      font-weight: 400;
+      font-size: small;
+    }
+
+    .h5-ineed {
+      position: absolute;
+      margin-top: -9px;
+    margin-left: 41px;
+    }
+
+    .main-body {
+    overflow: hidden;
+    }
+
   </style>
 </head>
 
@@ -292,15 +317,16 @@
     <nav class="navbar fixed-bottom now-playing">
 
       <div class="title-img">
-        <img src="./images/ab67616d0000b273056e90910cbaf5c5b892aeba.jfif" width="35" />
-        <h4>Another One Bites The Dust-Remastered 2011</h4>
-        <h5>Queen</h5>
+        <img src="./images/ab67616d0000b273056e90910cbaf5c5b892aeba.jfif" width="35" /> <span>Another One Bites The Dust-Remastered 2011</span>
+        <!-- <h4>Another One Bites The Dust-Remastered 2011</h4> -->
+        <h5 class='h5-ineed'>Queen</h5>
         <i class="bi bi-heart"></i>
         <i class="bi bi-aspect-ratio"></i>
       </div>
 
-      <div class="play-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172"
+      <div id='play-controls' class="play-btn ">
+
+        <svg id='shuffle' class='mr-2' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172"
           style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
             stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
@@ -314,7 +340,7 @@
           </g>
         </svg>
 
-        <svg id='prev-button' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
+        <svg id='prev-button' class='mr-2' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
           viewBox="0 0 172 172" style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
             stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
@@ -340,7 +366,7 @@
           </g>
         </svg>
 
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172"
+        <svg id='next-button' class='ml-2' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172"
           style=" fill:#000000;">
           <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
             stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none"
@@ -353,7 +379,7 @@
           </g>
         </svg>
 
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172"
+        <svg id='repeat-button' class='ml-1' xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 172 172"
           style=" fill:#000000;">
           <g transform="">
             <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
@@ -370,6 +396,7 @@
         </svg>
       </div>
 
+      <div class="volume-controls">
       <div class="vol-btn">
         <svg id="vol-btn-1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
           viewBox="0 0 172 172" style=" fill:#000000;">
@@ -412,6 +439,7 @@
             </g>
           </g>
         </svg>
+       </div> 
 
       </div>
 
@@ -420,7 +448,7 @@
       <hr class="duration-hr">
 
 
-      <div>
+      <!-- <div>
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 width="20" height="20"
                 viewBox="0 0 172 172"
@@ -438,11 +466,11 @@
               viewBox="0 0 172 172"
               style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#cccccc"><path d="M110.08,30.96v44.20938l-72.24,-47.12531v115.91187l72.24,-47.12531v44.20937h27.52v-110.08z"></path></g></g></svg>
               <i class="bi bi-arrow-repeat"></i>
-      </div>
+      </div> -->
       
-      <i class="bi bi-blockquote-left"></i>
+      <!-- <i class="bi bi-blockquote-left"></i>
       <i class="bi bi-tv"></i>
-      <i class="bi bi-volume-up-fill"></i><i class="bi bi-dash-lg"></i>
+      <i class="bi bi-volume-up-fill"></i><i class="bi bi-dash-lg"></i> -->
     </nav>
 
 
