@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/favicon.ico"
+      sizes="32x32"
+    />
+    <title>Artist Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        background-color: rgb(2, 2, 2);
+      }
+
+      .songs {
+        background-color: rgb(0, 0, 0);
+        color: #8f8f8f;
+      }
+
+      .menu {
+        background-color: rgb(0, 0, 0);
+        color: #7a7c74;
+        margin: 0px;
+        padding: 0px;
+        height: 11vh;
+      }
+      .btn-instal-app {
+        margin-top: 25px;
+        background-color: black;
+        border: 0;
+        color: grey;
+      }
+
+      .fixed-height {
+        background-image: url("https://s.abcnews.com/images/Entertainment/WireAP_90b2d91fff4e44bbb13f2a5aad5d5544_16x9_992.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 300px;
+        position: relative;
+      }
+
+      .dropdown {
+        position: static;
+        border-radius: 20px;
+        margin-top: 0%;
+        margin-left: 85%;
+      }
+
+      .dropdown-menu {
+        background-color: black;
+      }
+
+      .dropdown-menu a {
+        color: grey;
+      }
+
+      .dropdown-menu a :hover {
+        background-color: rgb(219, 81, 81) !important;
+        color: rgb(228, 80, 80);
+      }
+
+      .dropdown button {
+        color: grey;
+      }
+
+      .dropdown button:hover {
+        color: rgb(192, 185, 185);
+      }
+
+      .album-musics {
+        background: linear-gradient(
+          0deg,
+          rgba(9, 10, 10, 1) 60%,
+          rgb(80, 83, 83) 95%
+        );
+        position: relative;
+        max-height: 57vh;
+        overflow-y: scroll;
+      }
+
+      .now-playing {
+        background-color: #413e3e;
+        color: #ffefff;
+        height: 12vh;
+        position: relative;
+      }
+
+      .navbar div h4 {
+        font-size: x-small;
+      }
+
+      .navbar div h5 {
+        font-size: xx-small;
+      }
+
+      .vol-btn {
+        position: relative;
+        padding: 0px;
+        margin: 0px;
+        top: -20px;
+      }
+
+      #vol-btn-1 {
+        position: absolute;
+        padding: 0px;
+        margin: 0px;
+        top: 10px;
+        right: 210px;
+      }
+
+      #vol-btn-2 {
+        position: absolute;
+        padding: 0px;
+        margin: 0px;
+        top: 10px;
+        right: 240px;
+      }
+
+      #vol-btn-3 {
+        position: absolute;
+        padding: 0px;
+        margin: 0px;
+        top: 10px;
+        right: 180px;
+      }
+
+      .duration-hr {
+        border-radius: 4px;
+        background: linear-gradient(
+          90deg,
+          rgba(223, 230, 232, 1) 62%,
+          rgb(92, 94, 94) 42%
+        );
+        height: 5px;
+        width: 400px;
+        position: absolute;
+        padding: 0px;
+        margin: -7px;
+        top: 65px;
+        left: -90px;
+      }
+
+      .volume-hr {
+        border-radius: 4px;
+        background: linear-gradient(
+          90deg,
+          rgba(223, 230, 232, 1) 75%,
+          rgb(92, 94, 94) 25%
+        );
+        height: 5px;
+        width: 150px;
+        position: absolute;
+        padding: 0px;
+        margin: 0px;
+        top: -2px;
+        right: 23px;
+      }
+
+      .play-btn {
+        position: absolute;
+        padding: 0px;
+        margin: -7px;
+        top: 20px;
+        left: 600px;
+      }
+
+      ul.music-group-list {
+        overflow-y: scroll;
+        max-height: 53vh;
+      }
+
+      .list-group-item {
+        background-color: black;
+        font-style: normal;
+      }
+
+      .list-group-item a {
+        font-style: normal;
+      }
+
+      .divider {
+        border-top: 1px solid #767779;
+        display: block;
+        line-height: 2px;
+        margin: 0px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+      }
+
+      .main {
+        margin: 0px;
+        padding: 0px;
+        height: 88vh;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgb(58, 57, 57);
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgb(114, 116, 116);
+      }
+
+      #play-controls {
+        margin-left: -80px;
+      }
+
+      .volume-controls {
+        position: relative;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: small;
+      }
+
+      .h5-ineed {
+        position: absolute;
+        margin-top: -9px;
+        margin-left: 41px;
+      }
+
+      .main-body {
+        overflow: hidden;
+        padding: 0;
+      }
+
+      .play-btn .span-1 {
+        position: absolute;
+        padding: 0px;
+        margin: -7px;
+        top: 57px;
+        left: -128px;
+      }
+
+      .play-btn .span-2 {
+        position: absolute;
+        padding: 0px;
+        margin: -7px;
+        top: 57px;
+        left: 320px;
+      }
+
+      .musics-follow-btn {
+        background-color: transparent;
+        border: 1px solid rgb(155, 154, 154);
+        padding: 1px 10px;
+        border-radius: 2px;
+        color: rgb(199, 198, 198);
+      }
+
+      .musics-dot-btn {
+        background-color: transparent;
+        border: 0px;
+        border-radius: 2px;
+        color: rgb(199, 198, 198);
+        font-size: xx-large;
+      }
+      .album-musics-title {
+        color: white;
+        margin: 12px;
+        margin-left: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid main-body">
+      <div class="row main">
+        <div
+          class="menu col-12 col-sm-4 col-md-3 col-lg-2 pt-2 ml-0 sticky-top"
+        >
+          <a href="https://www.spotify.com/us/" target="_blank"
+            ><img
+              src="./images/Spotify_Logo_CMYK_Black.png"
+              width="100"
+              class="mt-2 ml-3 mb-3"
+          /></a>
+
+          <div class="">
+            <ul class="list-group">
+              <li class="list-group-item ml-3 pt-2 p-0">
+                <i class="bi bi-house-door-fill"
+                  ><a class="text-muted ml-2">Home</a></i
+                >
+              </li>
+              <li class="list-group-item ml-3 pt-2 p-0">
+                <i class="bi bi-search"
+                  ><a class="text-muted ml-2">Search</a></i
+                >
+              </li>
+              <li class="list-group-item ml-3 pt-2 p-0">
+                <i class="bi bi-bookshelf"
+                  ><a class="text-muted ml-2">Your Library</a></i
+                >
+              </li>
+              <li class="list-group-item ml-3 pt-4 p-0">
+                <i class="bi bi-plus-square"
+                  ><a class="text-muted ml-2">Create Playlist</a></i
+                >
+              </li>
+              <li class="list-group-item ml-3 pt-2 p-0">
+                <i class="bi bi-bookmark-heart"
+                  ><a class="text-muted ml-2">Liked songs</a></i
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-11 my-1">
+              <div class="divider">
+                <div>
+                  <strong class=""></strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <ul class="list-group music-group-list">
+              <li class="list-group-item">
+                <a class="text-muted mb-2">Funky Heavy Bluesy</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">Funky Heavy Bluesy</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">Your Top Songs 2020</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">In Love With You-</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">This is Rod Stewart</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">Your Top Songs 2019</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">Jun 19</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">Funky Heavy Bluesy</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">Your Top Songs 2020</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">In Love With You-</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">This is Rod Stewart</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">Your Top Songs 2019</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">Jun 19</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted mb-2">Funky Heavy Bluesy</a>
+              </li>
+              <li class="list-group-item">
+                <a class="text-muted">Your Top Songs 2020</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="">
+            <ul class="instal-app mb-5">
+              <li class="list-group-item mb-5">
+                <a
+                  href="https://www.spotify.com/us/download/other/"
+                  target="_blank"
+                >
+                  <button class="btn-instal-app mb-5" type="button" href="">
+                    <i class="bi bi-plus-circle-dotted "></i> Instal App
+                  </button>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="songs col-10 col-sm-8 col-md-9 col-lg-10 p-0 m-0">
+          <div class="fixed-height col-12">
+            <div class="dropdown">
+              <button
+                class="btn btn-black text-green dropdown-toggle btn-border p-0"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <img src="./images/adult-1.png" width="25px" alt="" />
+                User Name
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Setting</a>
+                <a class="dropdown-item" href="#">Log Out</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="album-musics">
+            <div class="musics-play-btn ml-3 mt-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="70"
+                height="70"
+                viewBox="0 0 172 172"
+                style="fill: #000000"
+              >
+                <g
+                  fill="none"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <path d="M0,172v-172h172v172z" fill="none"></path>
+                  <g fill="#2ecc71">
+                    <path
+                      d="M86,6.88c-43.63156,0 -79.12,35.48844 -79.12,79.12c0,43.63156 35.48844,79.12 79.12,79.12c43.63156,0 79.12,-35.48844 79.12,-79.12c0,-43.63156 -35.48844,-79.12 -79.12,-79.12zM75.68,116.96h-17.2v-61.92h17.2zM113.52,116.96h-17.2v-61.92h17.2z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+              <button class="musics-follow-btn ml-3 mt-3">Follow</button>
+              <button class="musics-dot-btn ml-3 mt-3">...</button>
+              <div>
+                <h5>Artist pick</h5>
+                <img
+                  src="https://images.genius.com/30a049d2de687550227ba815650eb196.300x300x1.png"
+                  widh="75"
+                  height="75"
+                  alt=""
+                />
+                <span>
+                  <img
+                    src="https://m.media-amazon.com/images/I/71FooDQq7RL._SS500_.jpg"
+                    widh="15"
+                    height="15"
+                    style="border-radius: 50%"
+                  />
+                  posted by Queen</span
+                >
+              </div>
+            </div>
+            <h3 class="album-musics-title">Popular</h3>
+
+            <ol class="list-group-playing-music">
+              <li class="list-group-playing ml-3 pt-2 p-0">
+                <a class="text-white mt-4 mb-2 mr-5">
+                  <span
+                    ><img
+                      src="https://cdns-images.dzcdn.net/images/cover/8b8fc5d117f9357b79f0a0a410a170e8/500x500.jpg"
+                      width="40"
+                      height="40"
+                      alt=""
+                  /></span>
+                  Another One Bites The Dust - Remastered 2011</a
+                >
+                <span class="info-1 m-5">1,013238,111</span>
+                <span class="info-1 m-5">3:25</span>
+              </li>
+              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
+                <a class="text-white mb-2">
+                  <span
+                    ><img
+                      src="https://angartwork.akamaized.net/webp/?id=42063425&size=296"
+                      width="40"
+                      height="40"
+                      alt=""
+                  /></span>
+                  Bohemian Rhapsody- Remastered 2011</a
+                >
+                <span class="info-1 m-5">1,013238,111</span>
+                <span class="info-1 m-5">3:25</span>
+              </li>
+              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
+                <a class="text-white mb-2">
+                  <span
+                    ><img
+                      src="https://i.scdn.co/image/ab67616d0000b273008b06ec71019afd70153889"
+                      width="40"
+                      height="40"
+                      alt=""
+                  /></span>
+                  Don't Stop Me Now - Remastered 2011</a
+                >
+                <span class="info-1 m-5">1,013238,111</span>
+                <span class="info-1 m-5">3:25</span>
+              </li>
+              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
+                <a class="text-white mb-2">
+                  <span
+                    ><img
+                      src="https://i.kfs.io/album/global/4768388,0v1/fit/500x500.jpg"
+                      width="40"
+                      height="40"
+                      alt=""
+                  /></span>
+                  Under Pressure - Remastered 2011</a
+                >
+                <span class="info-1 m-5">1,013238,111</span>
+                <span class="info-1 m-5">3:25</span>
+              </li>
+              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
+                <a class="text-white mb-2">
+                  <span
+                    ><img
+                      src="data:image/jpeg;base64,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"
+                      width="40"
+                      height="40"
+                      alt=""
+                  /></span>
+                  We Will Rock You - Remastered 2011</a
+                >
+                <span class="info-1 m-5">1,013238,111</span>
+                <span class="info-1 m-5">3:25</span>
+              </li>
+              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
+                <a class="text-white mt-4 mb-2 mr-5">
+                  <span
+                    ><img
+                      src="https://cdns-images.dzcdn.net/images/cover/8b8fc5d117f9357b79f0a0a410a170e8/500x500.jpg"
+                      width="40"
+                      height="40"
+                      alt=""
+                  /></span>
+                  Another One Bites The Dust - Remastered 2011</a
+                >
+                <span class="info-1 m-5">1,013238,111</span>
+                <span class="info-1 m-5">3:25</span>
+              </li>
+              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
+                <a class="text-white mb-2">
+                  <span
+                    ><img
+                      src="https://angartwork.akamaized.net/webp/?id=42063425&size=296"
+                      width="40"
+                      height="40"
+                      alt=""
+                  /></span>
+                  Bohemian Rhapsody- Remastered 2011</a
+                >
+                <span class="info-1 m-5">1,013238,111</span>
+                <span class="info-1 m-5">3:25</span>
+              </li>
+              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
+                <a class="text-white mb-2">
+                  <span
+                    ><img
+                      src="https://i.scdn.co/image/ab67616d0000b273008b06ec71019afd70153889"
+                      width="40"
+                      height="40"
+                      alt=""
+                  /></span>
+                  Don't Stop Me Now - Remastered 2011</a
+                >
+                <span class="info-1 m-5">1,013238,111</span>
+                <span class="info-1 m-5">3:25</span>
+              </li>
+              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
+                <a class="text-white mb-2">
+                  <span
+                    ><img
+                      src="https://i.kfs.io/album/global/4768388,0v1/fit/500x500.jpg"
+                      width="40"
+                      height="40"
+                      alt=""
+                  /></span>
+                  Under Pressure - Remastered 2011</a
+                >
+                <span class="info-1 m-5">1,013238,111</span>
+                <span class="info-1 m-5">3:25</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="row footer">
+        <nav class="col-12 navbar fixed-bottom now-playing">
+          <div class="col-12 col-xl-4 title-img">
+            <img
+              src="./images/ab67616d0000b273056e90910cbaf5c5b892aeba.jfif"
+              width="35"
+            />
+            <span>Another One Bites The Dust-Remastered 2011</span>
+            <!-- <h4>Another One Bites The Dust-Remastered 2011</h4> -->
+            <h5 class="h5-ineed">Queen</h5>
+            <i class="bi bi-heart"></i>
+            <i class="bi bi-aspect-ratio"></i>
+          </div>
+
+          <div id="play-controls" class="col-12 col-xl-4 play-btn">
+            <svg
+              id="shuffle"
+              class="mr-2"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 172 172"
+              style="fill: #000000"
+            >
+              <g
+                fill="none"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                style="mix-blend-mode: normal"
+              >
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="#ffffff">
+                  <path
+                    d="M1.34375,52.40625c0,2.28438 1.74687,4.03125 4.03125,4.03125h34.13125c6.9875,0 13.4375,3.09062 17.87188,8.6c0.80625,0.94063 2.01563,1.47813 3.09062,1.47813c0.94063,0 1.74687,-0.26875 2.55313,-0.94062c1.74687,-1.34375 2.01562,-3.89688 0.67188,-5.64375c-5.9125,-7.39062 -14.78125,-11.55625 -24.1875,-11.55625h-34.13125c-2.28438,0 -4.03125,1.74687 -4.03125,4.03125zM147.94688,95.27188c-1.6125,-1.6125 -4.16563,-1.6125 -5.64375,0c-1.6125,1.6125 -1.6125,4.16562 0,5.64375l14.64687,14.64687h-37.89375c-6.9875,0 -13.4375,-3.09063 -17.87187,-8.6c-1.34375,-1.74687 -3.89688,-2.01562 -5.64375,-0.67187c-1.74687,1.34375 -2.01562,3.89688 -0.67187,5.64375c5.9125,7.39063 14.64688,11.55625 24.1875,11.55625h37.75937l-14.64687,14.64687c-1.6125,1.6125 -1.6125,4.16563 0,5.64375c0.80625,0.80625 1.88125,1.20937 2.82187,1.20937c0.94062,0 2.01563,-0.40312 2.82188,-1.20937l21.5,-21.5c1.6125,-1.6125 1.6125,-4.16562 0,-5.64375zM147.94688,28.08438c-1.6125,-1.6125 -4.16563,-1.6125 -5.64375,0c-1.6125,1.6125 -1.6125,4.16563 0,5.64375l14.64687,14.64688h-37.89375c-9.40625,0 -18.275,4.16562 -24.1875,11.55625l-37.625,47.03125c-4.3,5.50937 -10.88437,8.6 -17.87188,8.6h-33.99687c-2.28438,0 -4.03125,1.74688 -4.03125,4.03125c0,2.28437 1.74687,4.03125 4.03125,4.03125h34.53437h0.13438c9.27188,-0.13437 17.87187,-4.3 23.65,-11.55625l37.625,-47.03125c4.3,-5.50938 10.88437,-8.6 17.87187,-8.6h37.75938l-14.64688,14.64688c-1.6125,1.6125 -1.6125,4.16563 0,5.64375c0.80625,0.80625 1.88125,1.20938 2.82188,1.20938c0.94062,0 2.01563,-0.40313 2.82188,-1.20938l21.5,-21.5c1.6125,-1.6125 1.6125,-4.16563 0,-5.64375z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+
+            <svg
+              id="prev-button"
+              class="mr-2"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 172 172"
+              style="fill: #000000"
+            >
+              <g
+                fill="none"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                style="mix-blend-mode: normal"
+              >
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="#cccccc">
+                  <path
+                    d="M61.92,75.16938v-44.20938h-27.52v110.08h27.52v-44.20937l72.24,47.11187v-115.89844z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+
+            <svg
+              id="play-button"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="35"
+              height="40"
+              viewBox="0 0 172 172"
+              style="fill: #000000"
+            >
+              <g
+                fill="none"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                style="mix-blend-mode: normal"
+              >
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="#ffffff">
+                  <path
+                    d="M86,6.88c-43.62608,0 -79.12,35.49048 -79.12,79.12c0,43.62952 35.49392,79.12 79.12,79.12c43.62608,0 79.12,-35.49048 79.12,-79.12c0,-43.62952 -35.49392,-79.12 -79.12,-79.12zM62.06448,123.95696l-0.28552,-75.66624l65.50104,37.58544z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+
+            <svg
+              id="next-button"
+              class="ml-2"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 172 172"
+              style="fill: #000000"
+            >
+              <g
+                fill="none"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                style="mix-blend-mode: normal"
+              >
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="#cccccc">
+                  <path
+                    d="M110.08,30.96v44.20938l-72.24,-47.12531v115.91187l72.24,-47.12531v44.20937h27.52v-110.08z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+
+            <svg
+              id="repeat-button"
+              class="ml-1"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 172 172"
+              style="fill: #000000"
+            >
+              <g transform="">
+                <g
+                  fill="none"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <path d="M0,172v-172h172v172z" fill="none"></path>
+                  <g fill="#cccccc">
+                    <path
+                      d="M105.2425,15.8025l-17.2,17.2l-4.945,4.8375l4.945,4.8375l17.2,17.2l9.675,-9.675l-5.4825,-5.4825h24.725c1.98875,0 3.44,1.45125 3.44,3.44v75.68c0,1.98875 -1.45125,3.44 -3.44,3.44h-41.28v13.76h41.28c9.41969,0 17.2,-7.78031 17.2,-17.2v-75.68c0,-9.41969 -7.78031,-17.2 -17.2,-17.2h-24.725l5.4825,-5.4825zM37.84,30.96c-9.41969,0 -17.2,7.78031 -17.2,17.2v75.68c0,9.41969 7.78031,17.2 17.2,17.2h24.725l-5.4825,5.4825l9.675,9.675l17.2,-17.2l4.945,-4.8375l-4.945,-4.8375l-17.2,-17.2l-9.675,9.675l5.4825,5.4825h-24.725c-1.98875,0 -3.44,-1.45125 -3.44,-3.44v-75.68c0,-1.98875 1.45125,-3.44 3.44,-3.44h41.28v-13.76z"
+                    ></path>
+                  </g>
+                </g>
+              </g>
+            </svg>
+            <span class="span-1">02:20</span>
+            <hr class="duration-hr" />
+            <span class="span-2">03:25</span>
+          </div>
+
+          <div class="col-12 col-xl-4 volume-controls">
+            <div class="vol-btn">
+              <svg
+                id="vol-btn-1"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="20"
+                height="20"
+                viewBox="0 0 172 172"
+                style="fill: #000000"
+              >
+                <g
+                  fill="none"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <path d="M0,172v-172h172v172z" fill="none"></path>
+                  <g fill="#cccccc">
+                    <path
+                      d="M28.66667,21.5c-7.91917,0 -14.33333,6.41417 -14.33333,14.33333v78.83333c0,7.91917 6.41417,14.33333 14.33333,14.33333h50.16667v-14.33333h-43v-78.83333h121.83333c0,-7.91917 -6.41417,-14.33333 -14.33333,-14.33333zM107.5,50.16667c-7.91917,0 -14.33333,6.41417 -14.33333,14.33333v71.66667c0,7.91917 6.41417,14.33333 14.33333,14.33333h35.83333c7.91917,0 14.33333,-6.41417 14.33333,-14.33333v-71.66667c0,-7.91917 -6.41417,-14.33333 -14.33333,-14.33333zM107.5,64.5h35.83333v71.66667h-35.83333z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+
+              <svg
+                id="vol-btn-2"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="20"
+                height="20"
+                viewBox="0 0 172 172"
+                style="fill: #000000"
+              >
+                <g
+                  fill="none"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <path d="M0,172v-172h172v172z" fill="none"></path>
+                  <g fill="#cccccc">
+                    <path
+                      d="M6.88,10.32v13.76h158.24v-13.76zM6.88,44.72v13.76h99.76v-13.76zM126.9575,48.16c-0.33594,0.02688 -0.645,0.08063 -0.9675,0.215c-1.29,0.5375 -2.15,1.84094 -2.15,3.225v68.8c0,1.38406 0.86,2.70094 2.15,3.225c0.43,0.17469 0.84656,0.215 1.29,0.215c0.90031,0 1.81406,-0.30906 2.4725,-0.9675l34.4,-34.4c1.34375,-1.34375 1.34375,-3.60125 0,-4.945l-34.4,-34.4c-0.73906,-0.73906 -1.78719,-1.06156 -2.795,-0.9675zM6.88,79.12v13.76h99.76v-13.76zM6.88,113.52v13.76h99.76v-13.76zM6.88,147.92v13.76h158.24v-13.76z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+
+              <svg
+                id="vol-btn-3"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="20"
+                height="20"
+                viewBox="0 0 172 172"
+                style="fill: #000000"
+              >
+                <g
+                  fill="none"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <path d="M0,172v-172h172v172z" fill="none"></path>
+                  <g fill="#cccccc">
+                    <path
+                      d="M91.53625,6.88c-2.29781,0 -4.48812,0.95406 -6.03344,2.63375l-42.28781,45.52625h-26.015c-5.65719,0 -10.32,4.66281 -10.32,10.32v41.28c0,5.65719 4.66281,10.32 10.32,10.32h26.015l42.28781,45.52625c1.54531,1.67969 3.73562,2.63375 6.03344,2.63375c4.50156,0 8.22375,-3.72219 8.22375,-8.22375v-141.7925c0,-4.50156 -3.72219,-8.22375 -8.22375,-8.22375zM91.53625,13.76c0.77938,0 1.34375,0.56438 1.34375,1.34375v141.7925c0,0.77938 -0.56437,1.34375 -1.34375,1.34375c-0.38969,0 -0.73906,-0.16125 -0.99437,-0.43l-42.38188,-45.63375v-52.3525l42.36844,-45.63375c0.26875,-0.28219 0.61813,-0.43 1.00781,-0.43zM136.55188,35.85125l-3.85656,5.68406c15.25156,8.96281 25.54469,25.51781 25.54469,44.46469c0,18.94688 -10.29312,35.50188 -25.54469,44.46469l3.85656,5.68406c17.07906,-10.2125 28.56812,-28.83687 28.56812,-50.14875c0,-21.31187 -11.48906,-39.93625 -28.56812,-50.14875zM124.95531,52.90344l-3.89688,5.72438c9.82281,5.20031 16.54156,15.50687 16.54156,27.37219c0,11.86531 -6.71875,22.17188 -16.54156,27.37219l3.89688,5.72438c11.63687,-6.47688 19.52469,-18.86625 19.52469,-33.09656c0,-14.23031 -7.88781,-26.61969 -19.52469,-33.09656zM17.2,61.92h24.08v48.16h-24.08c-1.92156,0 -3.44,-1.51844 -3.44,-3.44v-41.28c0,-1.92156 1.51844,-3.44 3.44,-3.44zM113.25125,70.13031l-4.01781,5.92594c4.43438,1.15563 7.72656,5.14656 7.72656,9.94375c0,4.79719 -3.29219,8.78813 -7.72656,9.94375l4.01781,5.92594c6.20813,-2.60687 10.58875,-8.73437 10.58875,-15.86969c0,-7.13531 -4.38062,-13.27625 -10.58875,-15.86969z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <hr class="volume-hr" />
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
