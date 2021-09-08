@@ -15,7 +15,7 @@
     <link
       rel="icon"
       type="image/png"
-      href="./images/favicon.ico"
+      href="./images/icons8-spotify-50 (1).png"
       sizes="32x32"
     />
     <title>Artist Page</title>
@@ -39,15 +39,10 @@
         background-color: rgb(0, 0, 0);
         color: #7a7c74;
         margin: 0px;
-        padding: 0px;
         height: 11vh;
+        padding-left: 0;
       }
-      .btn-instal-app {
-        margin-top: 25px;
-        background-color: black;
-        border: 0;
-        color: grey;
-      }
+
 
       .fixed-height {
         background-image: url("https://s.abcnews.com/images/Entertainment/WireAP_90b2d91fff4e44bbb13f2a5aad5d5544_16x9_992.jpg");
@@ -92,12 +87,13 @@
           rgb(80, 83, 83) 95%
         );
         position: relative;
-        max-height: 57vh;
+        height: 46.3vh;
         overflow-y: scroll;
+        overflow-x: hidden;
       }
 
       .now-playing {
-        background-color: #413e3e;
+        background-color: #181818;
         color: #ffefff;
         height: 12vh;
         position: relative;
@@ -122,24 +118,24 @@
         position: absolute;
         padding: 0px;
         margin: 0px;
-        top: 10px;
-        right: 210px;
+        top: 13px;
+        right: 178px;
       }
 
       #vol-btn-2 {
         position: absolute;
         padding: 0px;
         margin: 0px;
-        top: 10px;
-        right: 240px;
+        top: 13px;
+        right: 210px;
       }
 
       #vol-btn-3 {
         position: absolute;
         padding: 0px;
         margin: 0px;
-        top: 10px;
-        right: 180px;
+        top: 13px;
+        right: 150px;
       }
 
       .duration-hr {
@@ -149,13 +145,13 @@
           rgba(223, 230, 232, 1) 62%,
           rgb(92, 94, 94) 42%
         );
-        height: 5px;
+        height: 3px;
         width: 400px;
         position: absolute;
         padding: 0px;
         margin: -7px;
-        top: 65px;
-        left: -90px;
+        top: 58px;
+        left: -86px;
       }
 
       .volume-hr {
@@ -165,13 +161,13 @@
           rgba(223, 230, 232, 1) 75%,
           rgb(92, 94, 94) 25%
         );
-        height: 5px;
-        width: 150px;
+        height: 3px;
+        width: 100px;
         position: absolute;
         padding: 0px;
         margin: 0px;
         top: -2px;
-        right: 23px;
+        right: 43px;
       }
 
       .play-btn {
@@ -184,12 +180,23 @@
 
       ul.music-group-list {
         overflow-y: scroll;
-        max-height: 53vh;
+        max-height: 43vh;
+        list-style-type: none;
+      }
+
+      .music-group-list {
+        padding-left: 16px;
+        padding-right: 16px;
       }
 
       .list-group-item {
         background-color: black;
         font-style: normal;
+      }
+
+      .list-group-menu {
+        padding-left: 16px;
+        padding-right: 16px;
       }
 
       .list-group-item a {
@@ -213,11 +220,11 @@
       }
 
       ::-webkit-scrollbar {
-        width: 10px;
+        width: 8px;
       }
 
       ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px grey;
+        /* box-shadow: inset 0 0 5px grey; */
         border-radius: 10px;
       }
 
@@ -231,7 +238,7 @@
       }
 
       #play-controls {
-        margin-left: -80px;
+        margin-left: -25px;
       }
 
       .volume-controls {
@@ -258,16 +265,18 @@
         position: absolute;
         padding: 0px;
         margin: -7px;
-        top: 57px;
+        top: 50px;
         left: -128px;
+        color: grey;
       }
 
       .play-btn .span-2 {
         position: absolute;
         padding: 0px;
         margin: -7px;
-        top: 57px;
+        top: 50px;
         left: 320px;
+        color: grey;
       }
 
       .musics-follow-btn {
@@ -290,48 +299,131 @@
         margin: 12px;
         margin-left: 40px;
       }
+
+      #repeat-button {
+        margin-left:10px;
+        
+      }
+
+      .table {
+        background-color: transparent !important;
+        /* border-top: 1px solid grey; */
+        padding-left: 15px;
+      }
+
+      .t-h {
+        font-weight: 400;
+      }
+
+      .list-group-item-1 {
+        padding:0;
+      }
+      
+      .container-intall-app {
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        height: 5vh;
+      }
+
+      #install-app-icon {
+        margin-left: 20px;
+        margin-right: 18px;
+        margin-bottom: 5px;
+      }
+
+      .btn-instal-app {
+        margin-top: -3px;
+        background-color: black;
+        border: 0;
+        color: grey;
+        /* height: 10vh; */
+        margin-right: -8px;
+        padding-bottom: 28px;  
+      }
+
+      .instal-app {
+        padding: 0;
+      }
+
+      .instal-app li{
+        padding: 0;
+        margin: -24px;
+      }
+
+      #test {
+        word-wrap: break-word;
+      }
+
+      #expand {
+        position: absolute;
+        margin-left: 363px;
+        margin-top: -10px;
+      }
+
+      .expand {
+        position: relative;
+      }
+
+      #dropdownMenuButton {
+        /* border: 1px solid white !important; */
+        border-radius: 20px;
+        background-color: #02020270;
+      }
+
+      .playlist {
+        padding-left: 16px;
+      }
+      .playlist ul {
+        padding: 0;
+      }
+
+      #btn-b4-follow {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        font-weight: bold;
+      }
+
     </style>
   </head>
 
   <body>
     <div class="container-fluid main-body">
       <div class="row main">
-        <div
-          class="menu col-12 col-sm-4 col-md-3 col-lg-2 pt-2 ml-0 sticky-top"
-        >
-          <a href="https://www.spotify.com/us/" target="_blank"
-            ><img
+
+        <div class="menu col-12 col-sm-4 col-md-3 col-lg-2 pt-2 ml-0 sticky-top" >
+          <a href="https://www.spotify.com/us/" target="_blank">
+              <img
               src="./images/Spotify_Logo_CMYK_Black.png"
               width="100"
-              class="mt-2 ml-3 mb-3"
-          /></a>
+              class="mt-2 ml-3 mb-3"/></a>
 
           <div class="">
-            <ul class="list-group">
-              <li class="list-group-item ml-3 pt-2 p-0">
-                <i class="bi bi-house-door-fill"
-                  ><a class="text-muted ml-2">Home</a></i
-                >
+            <ul class="list-group-menu">
+              <li class="list-group-item  pt-2 p-0">
+                <img src="./images/icons8-home-50.png" width="28" alt=""> 
+                <h6 class="d-inline-block">Home</h6>
               </li>
-              <li class="list-group-item ml-3 pt-2 p-0">
-                <i class="bi bi-search"
-                  ><a class="text-muted ml-2">Search</a></i
-                >
+              <li class="list-group-item  pt-2 p-0">
+                <img src="./images/icons8-search-50.png"width="28" alt="">
+                <h6 class="d-inline-block">Search</h6>
               </li>
-              <li class="list-group-item ml-3 pt-2 p-0">
-                <i class="bi bi-bookshelf"
-                  ><a class="text-muted ml-2">Your Library</a></i
-                >
+              <li class="list-group-item  pt-2 p-0">
+                <img src="./images/icons8-music-library-50.png" width="28"alt="">
+                <h6 class="d-inline-block">Your Library</h6>
+            </ul>
+          </div>
+
+          <div class="playlist">
+            <ul>
+              <li class="list-group-item pt-3 p-0">
+                <img src="./images/icons8-add-new-50.png" width="28" alt="">
+                <h6 class="d-inline-block">Playlist</h6>
               </li>
-              <li class="list-group-item ml-3 pt-4 p-0">
-                <i class="bi bi-plus-square"
-                  ><a class="text-muted ml-2">Create Playlist</a></i
-                >
-              </li>
-              <li class="list-group-item ml-3 pt-2 p-0">
-                <i class="bi bi-bookmark-heart"
-                  ><a class="text-muted ml-2">Liked songs</a></i
-                >
+              <li class="list-group-item  pt-2 p-0">
+                <img src="./images/icons8-favorite-folder-50.png" width="28" alt="">
+                <h6 class="d-inline-block">Liked Songs</h6>
               </li>
             </ul>
           </div>
@@ -348,55 +440,55 @@
 
           <div>
             <ul class="list-group music-group-list">
-              <li class="list-group-item">
-                <a class="text-muted mb-2">Funky Heavy Bluesy</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">Funky Heavy Bluesy</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">Funky Heavy Bluesy</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">Funky Heavy Bluesy</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">Your Top Songs 2020</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">Your Top Songs 2020</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">In Love With You-</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">In Love With You-</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">This is Rod Stewart</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">This is Rod Stewart</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">Your Top Songs 2019</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">Your Top Songs 2019</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">Jun 19</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">Jun 19</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">Funky Heavy Bluesy</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">Funky Heavy Bluesy</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">Your Top Songs 2020</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">Your Top Songs 2020</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">In Love With You-</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">In Love With You-</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">This is Rod Stewart</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">This is Rod Stewart</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">Your Top Songs 2019</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted mb-1">Your Top Songs 2019</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">Jun 19</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">Jun 19</a>
               </li>
-              <li class="list-group-item">
-                <a class="text-muted mb-2">Funky Heavy Bluesy</a>
+              <li class="list-group-item-1 mb-3">
+                <a class="text-muted ">Funky Heavy Bluesy</a>
               </li>
-              <li class="list-group-item">
+              <li class="list-group-item-1 mb-3">
                 <a class="text-muted">Your Top Songs 2020</a>
               </li>
             </ul>
           </div>
 
-          <div class="">
+          <div class="container-intall-app">
             <ul class="instal-app mb-5">
               <li class="list-group-item mb-5">
                 <a
@@ -404,19 +496,22 @@
                   target="_blank"
                 >
                   <button class="btn-instal-app mb-5" type="button" href="">
-                    <i class="bi bi-plus-circle-dotted"></i> Instal App
+                    <img id='install-app-icon' src="./images/icons8-scroll-down-50.png" width="20" height="20"alt=""> Install App
                   </button>
                 </a>
               </li>
             </ul>
           </div>
         </div>
+        
+        
 
         <div class="songs col-10 col-sm-8 col-md-9 col-lg-10 p-0 m-0">
           <div class="fixed-height col-12">
+
             <div class="dropdown">
               <button
-                class="btn btn-black text-green dropdown-toggle btn-border p-0"
+                class="btn btn-black text-green dropdown-toggle btn-border mt-3 p-0"
                 type="button"
                 id="dropdownMenuButton"
                 data-toggle="dropdown"
@@ -435,190 +530,107 @@
 
           <div class="album-musics">
             <div class="musics-play-btn ml-3 mt-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="70"
-                height="70"
-                viewBox="0 0 172 172"
-                style="fill: #000000"
-              >
-                <g
-                  fill="none"
-                  fill-rule="nonzero"
-                  stroke="none"
-                  stroke-width="1"
-                  stroke-linecap="butt"
-                  stroke-linejoin="miter"
-                  stroke-miterlimit="10"
-                  stroke-dasharray=""
-                  stroke-dashoffset="0"
-                  font-family="none"
-                  font-weight="none"
-                  font-size="none"
-                  text-anchor="none"
-                  style="mix-blend-mode: normal"
-                >
-                  <path d="M0,172v-172h172v172z" fill="none"></path>
-                  <g fill="#2ecc71">
-                    <path
-                      d="M86,6.88c-43.63156,0 -79.12,35.48844 -79.12,79.12c0,43.63156 35.48844,79.12 79.12,79.12c43.63156,0 79.12,-35.48844 79.12,-79.12c0,-43.63156 -35.48844,-79.12 -79.12,-79.12zM75.68,116.96h-17.2v-61.92h17.2zM113.52,116.96h-17.2v-61.92h17.2z"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
+
+              <button id='btn-b4-follow' type="button" class="btn btn-success">II</button>
               <button class="musics-follow-btn ml-3 mt-3">Follow</button>
               <button class="musics-dot-btn ml-3 mt-3">...</button>
-              <div>
-                <h5>Artist pick</h5>
-                <img
-                  src="https://images.genius.com/30a049d2de687550227ba815650eb196.300x300x1.png"
-                  widh="75"
-                  height="75"
-                  alt=""
-                />
-                <span>
-                  <img
-                    src="https://m.media-amazon.com/images/I/71FooDQq7RL._SS500_.jpg"
-                    widh="15"
-                    height="15"
-                    style="border-radius: 50%"
-                  />
-                  posted by Queen</span
-                >
-              </div>
+
             </div>
             <h3 class="album-musics-title">Popular</h3>
 
-            <ol class="list-group-playing-music">
-              <li class="list-group-playing ml-3 pt-2 p-0">
-                <a class="text-white mt-4 mb-2 mr-5">
-                  <span
-                    ><img
-                      src="https://cdns-images.dzcdn.net/images/cover/8b8fc5d117f9357b79f0a0a410a170e8/500x500.jpg"
-                      width="40"
-                      height="40"
-                      alt=""
-                  /></span>
-                  Another One Bites The Dust - Remastered 2011</a
-                >
-                <span class="info-1 m-5">1,013238,111</span>
-                <span class="info-1 m-5">3:25</span>
-              </li>
-              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
-                <a class="text-white mb-2">
-                  <span
-                    ><img
-                      src="https://angartwork.akamaized.net/webp/?id=42063425&size=296"
-                      width="40"
-                      height="40"
-                      alt=""
-                  /></span>
-                  Bohemian Rhapsody- Remastered 2011</a
-                >
-                <span class="info-1 m-5">1,013238,111</span>
-                <span class="info-1 m-5">3:25</span>
-              </li>
-              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
-                <a class="text-white mb-2">
-                  <span
-                    ><img
-                      src="https://i.scdn.co/image/ab67616d0000b273008b06ec71019afd70153889"
-                      width="40"
-                      height="40"
-                      alt=""
-                  /></span>
-                  Don't Stop Me Now - Remastered 2011</a
-                >
-                <span class="info-1 m-5">1,013238,111</span>
-                <span class="info-1 m-5">3:25</span>
-              </li>
-              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
-                <a class="text-white mb-2">
-                  <span
-                    ><img
-                      src="https://i.kfs.io/album/global/4768388,0v1/fit/500x500.jpg"
-                      width="40"
-                      height="40"
-                      alt=""
-                  /></span>
-                  Under Pressure - Remastered 2011</a
-                >
-                <span class="info-1 m-5">1,013238,111</span>
-                <span class="info-1 m-5">3:25</span>
-              </li>
-              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
-                <a class="text-white mb-2">
-                  <span
-                    ><img
-                      src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBYVFRgUEhUYGBgaHBocGhoaHCEhHRoaHh0cGh8eHyQhIS4lHx4rIRgaJjgmLC80NTU3Gic7QDszPy40NTEBDAwMEA8PGBIRGDQhGCExNDE0NDE0NDQ0NDQ0NDQ0PzQ0PzQ0ND80NDQ/NDQ/Pz80NDQ/NDE0NDE/NDQ/ND8/P//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAABAUGAwIBB//EAEQQAAIBAwMCAwYDBAcGBgMAAAECEQADIQQSMQVBIlFhBhMycYGRQlKhFLHB0SMzYnJzkvAVJIKys+EHNEOD0vFTtML/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAMAwEAAhEDEQA/AJdKUraFKUoFKUoFKVntLeOtuPJI09ttgUEj3r9y8cr/AGeDImgu/wBoSdu9J8twn7TXaordPsldptWyv5dix9MYrPNebQ6hbe5m0134QxJNsyAQCcwCVx5HzGQ1dKp/aTW3LFr3torIZQVZZEHGIIPMVaWVYAb23HuYgfQeVB0pVZduXRqEthl2MjufD4gVKiAZiPGO3Y1x9oNbdsqjWmXxuqEOsxumCII7j9aC5pVTcsas4N21BIDbUYNtJAYgliAYntVhqQ2w+7IUgGJEjAxI8vkaDtSs90fU6rUWUvB7Kht2PdsYhivO70q40Ft1Qe9YM5JLECBM4AHYAAD6UEmlUHUusPp76LchrJUFnCndbJJUEkGCJHkOfvezIkHkYIz9R50HqlV+gu3Ge6rspW2wVdqwSCqvklj2cDEcVYUClKUClKUClKUClKUClKUClKUClKUHLUzsfbztaPnBis3/AOH7D9ncDkXJ+hRI/cftWprMron0d97tpS9i58aJl0MkyB+IAk8dj6UGmrJ/+ICzatxzvIHnlW/iBV0euacCTeRfRjDD/hPin0ioZ0jam+l51KWbebasIZ3MHcw/CogQDnHrQefbHGlM/mtz/mFX9Q+saEX7L2iY3DB8mBDA/KRUbRa28qhL+nublABZNrK8YkHcIn1oO10f7zb/AMK7/wA9mq/2xn3VvbE+/txPE+KJ9Jqy0dp2dr1xdpKhESQSqA7iWIxuJOYkAKMmq/2psXbiIlm2zstxXOVA8IPmRMkj9aCZZGpNxRd90EAZj7vcSWEBVO7gZJx+X7zr3wt8j+6q4dSvxnR3J9Htn/8Aqu6X3azuKMXdSwQRIkeFZJAmCJPnNBn/AGbOq/ZE9z7nb49u/du+Np4xzMfStYiQAJmBEnv61m+gNqdPZWy+ldtpaCrpkEluC3mTVxodTcdm32mthQAAzAlicz4ZEAAd/wAXpUg8XbKvfdHAZWsgEHgje1VeivNo7gsXSTYY/wBDcP4D+Rj+7+U7bMM37QW92+z3YXd4fiDFoid0QfKpWv0aXka3cEq33B7Eeoqjh0/+s1P+In/RtVPqn9ndDcsi6l1ix3ja5/EgRVU/QLH0q4oFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoIXVOm29Qmy6s/lYfEp8wf4cVn0fUaDwuDf0w4ZfiQfwHoceo4rW0oInT+o2767rThh3H4h8xyKl1U6r2fsO28Kbb/AJ7ZKNJ74xP0rylm4p2LrQfR0Rm+WCp+9BcUqNY0zKdz3Hdu0wqj5KoA+pk1JoFK+V9oFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFKUoFctRfVF3OwUeZ/d6n0qB1XrKWQQPE/5Z48t38uflzWO1OquXiXuEsQMDAAnEScKP5dzU1MX3VesO8iwQiD4mYgMfkMsB8lkyI71lOqWvCuxO+4kL8WJmQO0/rVojhNp8JYmIzt4yIME9sYye9eOkMLmpRQm4Dc20yBuVTtBHAyAY/lVVqPZRLg06++kEsxUHkIeBn1mPSKuao7fX0W3Lb2dRDjYRD8EFo284wT9azGu9ortzIcoDwiEj9RBPfP6Cg3SXf6V08kRh8iXB/cPvXrXakW0e4wJCiYHJ8h9TFYXQdWcOpuOzD4DuyShiRJyZ2k/Wtd19g2lunkFDH14P6g/SgzOk9sLzuBsTafwgGTnjduxyMx9K1eh6mlzEhX7oT39Dw30rEaN0RVLCDBVivzBBgjMDb5YjPBEgp4jv4/MuVYTExjawP7o8zQb2lZDp/XntYukvan4xkp2z3CyOGAPMExFay3cVgGUhlOQQZBFB7pSlApSlApSlApSlApSlApSlApSlApSlAqi691n3YNu1l+57IP4t+79K9e0PV/dD3dsj3jDn8i/m+fMff0OLe6WPhzPmefUny/7mlqR9a4WOOSee5Pfn/XNdv2XAAeD3McA/l45zmQTGPOvLAJ4Vy2JkfUAen6nuAMH5Ch13OCZ8IWWY/mYk4Exz4j8s1FSXG2CjPtCkduTjwkEGM8RVt7J6ZFV9SxkjwwudoAzgCeDxVWHHiDZkScYUdlX+1EZmTM4zVv7IAKLzuwVdwxMQACS2ciSTz5Hzqio9r+qB2RLYIRVlQRGT32kSMRHzNV/Q+jvqA7AgIgOW7tzA/X71H61qN9xn7sZP1zH7qtPZ/qLJp71q2vic+FpgLuG1mOOFG3ickedBW2tSpIidswMDkcd/I1uOl3FGmL6h/AAVz2WIj+8SY+wFYzQ2xcK2UWWD7iR5cQpnKz3IwD3qy68xL29Kj+FFO8DG64xO6Jwfij70EXTke7AAxvO3eCCQOIgQMQYOCSfSumoO5toQMs4A/CeAYEMMDnE/cV9010NuAYbFgZ2ncODKmJJjDciD6A8rh3MW2qeYJIEd+ARI+XcfSoOFqVJIfaYJAzM4kBu4PeY+EVM6f1i5abchEfiSIVuTOBhvUCeOagGR5x+oPnP8a8OBglhHmcCfXyNB+kdL6mmoTdbPGGU/Ep8iP48Gp1flmm1D23Fy00OOfyuPyt5gj/U5r9F6R1NNRbDpg8Op5Vu4P86onUpSgUpSgUpSgUpSgUpSgUpSgVW9a6qLCY8Tt8CfpuPkonNOs9YTTrJ8TkHYkxPqT+FR51+e6jUvfcuxJLYZ4MHyRB+Udh96Jj3qLpZj4t7MdzMeWPcnyUfwHyqSyG34fxsBJj4Z7AdiPI8d84X3fjSqJWb7gFUOSg4Dv5ufwrwvMSKh6e4GYiSSBJPIHb5kkn6/viuqJnOfzE5559f511dQhe5u3Nwo/CBhVDd2iQSMCeQa9OYHMR+n825/1NSdBpQ5hpEQxJ+FFAPiPn8QI8yB8qDi52hC24M24gEZKyoBIOZJYwPXieK3X3gu0ooBYbs87cbTiOQvHyq019+WDrIKytsflU+vdiAT82PnVN1l5YcY8OOIVUGPITNUQHcnmrTQajahUHYZgseJJMf5Rn657VyXRQh3QDuAn0Chj+jH7VL1GmVvCsEB2ZokGDBxPM+ESKKirqRab/d2IYgqz/lVuynkf3hnHOTVhYslFZ3MuTPiwCO5kGRMyCfLtzVc/TSABMETuPoTCY9Y/WpVm4UYpcXcpIC7syFEj6wwyI486CSxVBDDLDBO0soOSJEbxI4+xr4FXaRCNMbWCwSvricERJny7V6tKVKvaVWVOVbODPhbdIKmSA3oPKp2q06svvLICqI321CzbJjOMFe0+kfKIrCkZme0+Xow9fsfvUO6PiVPiH4Y5GOPP/Xoas1sBmAz2mPI85IOMDHMn0ri+l3BdpZHHiVj8Shc/EOPiBif1oKkNjcpx3A5X/5L/PtVl0nqTae4rxhgNyg+G4s8g/mGYng4Peu1rSDUmBFvVCZxCXvUdlfzHBzjmONhltk2tUje7J8ax4rb8b17/MZBHnVV+j6XUpcRXttuVhIP8D5EcEV2rL9OsPpfEhN7TP4pXLKMQ0d8cxyB2gVpbVxXUMhDKcgjg0R7pSlApSlApSlApSlArlqGIRiHVIHxMJVfUiR++utKDCXdBcvufdb7knN24NqnnKiOPTPoB3sGspo13Ei5qCMT8KeRjy/U+g41F5SykBipIwwgkeomRPzqg1PQSW2oGJJ3NduEHPkFESfUj61MGNOluXHLkks5JZzyfPYvJxjGO2BVnb6cyQgUq0FoMbgI+MnsfpitpoOnJaBIlnPxO3xH+Q9Kz/tSAhGwg3X3NnyxEegCkAd+e1U1VXECxJBMiBIg+QE8k/rH2krrldEtWVYliDcJENcYSQB32g5k/Pzqus6Ys7JbDlyvDiS0nuwgIBGSCZ47TX3VaN7e1lZVKqrkjIMypOZBAKkeo+1BZanQFC6GC1u37xyPhBmRHyAB/wCE1RazpV5mAW20ECCf7UvnyjfH0rddC6nbvJ4mQ3GO1xiXhcHb5QD6YNc/ajW+7QKHClpBESzAiAoAyAZ59KCFoenJ4veui7rbqy7hIJYEOPln6j5141HVtGhtLl7lsp4razJVSkEmNwycCaprnR2a2jN4GYxtHJAAg7SZ2j5z6cVU3dDcUE7CNoliDMZjcfIdv30Gv0Ws0d0hQzIqLclXEEkmQ0g9pf1yO4qMOgLfCKNQjEeI7WBbgSAOQAIGRPfvVHa0lx2RlUiYBPdhmTECcA/9hmrdECPbNwBFJG24XMA8crjcADIMcd+aC3v+zhQpc0zeNBDI+VuDup/vdwcd8HJj9S0Xu1XWadmSI3IwkKGMMDMYBwVOPKIrWA+XFVnWdXZRT7y4EaOJJJH90EFhigwlzXOZdF2S2FClkMxtAJxycRipfS9UdQ/u9qBiDyeYzGTJxODP2Jh7RahLvu7lu/vEbdgRlKhSWkkknk1V9NQtfRcI28NuONpB8IPkC0CfUUGk1nQLijfaDTMlfxo3MiPiE8EZ+cVZaTV2tUos6gD3gwDwSRztPZsSV/eOPPV+tPaeytxAkkM8HcoBLLzALYDHtnbzGbnVdPtXYa4iscQ0Qw7iGGR96CF0rpb6ZiqOHskk7WwyHzUjBB7jHnjM2yoBwAJyY86KsCM48zJ+55r1QKUpQKUpQKUpQKUpQKUpQfDWR6x1Iad505Ygg70YsVlGUEw3mGaWHdfQ1r6rOtdGTUqA5Kss7XXkTyPUHyoJmi1AuW0uKCA6hgDyJExWX9trBJW4gbdbjdggbRJUhoiZYiPX0q66Zpn09tbbf0irMMoO8LOPDndAxgzAEA1L1lhL1plPiV1xBie6kHtmDNB+eabqe1diMdpYO+9Q2cAnJmMCRkV81Ws8DpcfezRJHkIgL5fET5YNferdKfTCGzuC5GVPmJgZHHriqcwwLE+LGPOT/KaKsun6h7Do9shSwJOMMsjEdsH9audCiNbuai45e8zJtnJQSGx2yFIxjG3zqq6XoTeZVIJG2MS0eHB81Egc8RUfQhkdwZ8EhlPMboYxPbv96I0uk0ty+5APkWZshf5nGBjjsKuB7PpuBLFhGSfimCoIggARHb8Pqam9J0ot2lXufEx82OT9sD5AVH6vq9j2hvKS0wADuAx5y3xDAngntQRU6CVFxkKq7RHJBA8yfEC3eOIHMVS3SE3JfWUJAdSc+hB/NmQe9bmsN7Y3S17YoHhVVJHxsxyFHr41/wAxoRK6F1ILbdBcYqHZVcqfCgAyo5kzPHPbyz/U9O733baxBMg3cFh2YxGDAwBVrf26XTgFVa4HIOfDuKIxOD+GQuOdtUt7TOy+9uSoJiWmZjcVUEzAAEk5yKCMyXAdibsT8JwPOCO3/wBVo/ZfpTXQxuLFt7RUN3YllyJHI2E+hI57Zqxr3U5YlSQWB8u/yx5V+s6Z0KDYQVgRB7Rj9KFZz2s6Z757SIfGxMiMBAMue8A7R9fvpbKbVCyTAiT/ANqi9O8Re6fiZ3T5IjtbCj0lWb5uanUClKUClKUClKUClKUClKUClKUCubXlDBCyhm+FSRJjmBya6VT+07FbIcKT7t7bkjkBWyfsT9CaC0vXVRSzsFVRJJMACuHTpKbmXbuZ3CnBVWYkSOxgyR2JIrPdJ1r6p95QkKRDH+rSCASoPxuYJ7bQcZ5v+q9STTobj/JVHLN2A/nQZL2+1p97btqY2LuPzYwJ+QX9az2jtK8b2AG4byTGDgH9T96nsDrbhYA7zJMdgP4AYHep9j2cKK1xg21VJgiJjOQTLcYBgUFd/su6qe+tHcELRcQEcAcRyZ+Ymc1Ns3Fvslz/ANbAYxIcmPiAHhOCARyBGakaHrzoq2iiJbtjbcJGCScR2Mnnz5rrqelKmouOHM7t4ULkmN4Abd3Yx/w96C21txrCovvTuMLGNqLhZiJMSM+hNQdTesuVW3qC7hmDTMhYycj5CqzU3He+18SV3QwKnBVp2kHPDKK42dIbTFm+JuSWEAMcj58Z4EjjuF6usshkFm6zozEOskbYkjsIMzivGu6aoP7TbcPuMJydsqAeSSW8JHbbA7iqfS6I228BLEkEhivIViQSeDJ55wc81J06FEdAWK790k4DFYx5zkyAPi9IoIX+z/fXkV3WCwGyQGAIG4iTniceVanr/RxcVGthQU3RPHiKySOI8OST3NZJwrAkrmSJiNw8p+cR2mMiplzUXr+1HcsojA+GRHbG8z6H6UGf1OnIgqMf2RiBgHk8+da32U1p91tOHSNv9tCwG0jvBOPKfKvSIW2o4IRRCyoEeffdye+6ZqrsOEuNukBAfeHmJO3b6kn91Br9RqP2dyz/ANRcaS3/AOO4cSf7DHM9mJ7HForAiRkHiomn1Fu+rKASI2ujKVYAjhlYTBFVHs3qSHfT7iwtPcCn+wICye5ncPofKg0dKUoFKUoFKUoFKUoFKUoFKUoFKUoKIe80gKJa97aLMyBDDpuO4qQRBWSYMzFZ72jXUXbTX7yBEVlVEGSAZliYEydo/h57wOJKgiREicieJ+xrEe1nUHd20ysTt2kqqkbj8QHJJ/CZEfxoRUezV0W76NcwoLTukADaIPqZiBWv1XtHZdHRQ4YqwUshAJjBz2nzzVf0/oy2bJfVMqucqIkqI8hkt/dg+tU1+xLZJUhuICiCfxADAgDH+iHXpYVryrcG8OyBkJ5GQpEdlLfcxPNaf2k0pgXU/CNrf3ZkH5Ak/wCb0rIWLqLdm4rbfDBWQTiZU4ghjIPpWr6D1o3nNko7qA0u0GBJhX8IU4IEjn7mgor+52UKrMTEgTtLE5JOQrtH1J9ZrxpulagsT+zsoIPJjJJIOCDOR27Ve9S6Gyy1mWT8k5Hy/MPTn51y0et1CiAxI4G9d0Rg5xn+8aCntdMvqJu2CF5LFpzMgGGJzgdz8+3ZdzKiBSpkgKQJJJiTHMwB8gKudfpveojI7OxAJkjaJAz+RDmI5PrVd1H3mjKbApdwT7xvhQzG1QfxEHk8ziM0FKZEK7eIbxJmN6sdwPkM4+Z4q/8AZS2lwuGUDbDKAcHJUmIzBAGZmTVA+8ln8LM7Fv7xcCYA7Fl59Kn9E0hklGZBACsu4kTMjAnaYH1z6UF91XSBG3bfAeI7EniP9YNY/rbH3rWCu0BiWBMksRukn5ED6VpW6fccq2p1AuIQSNnCquXYQB6DdEieK7e0Gj02odbfvQl4SqkAt5ja+OJHc/voOH7M2ot6a7auMWVFS7sba8QJzIyGDeE8z977pHT1spsUROSSAGJ9YmfuazvsjcazefSXZ3CSMyuMyPmIP7/TXlwCASJMwO5jmKJXqlKUUpSlApSlApSlApSlApSlBx1F/ZHhnzMgBVkAkz8/0oNQPJoHfaf3fEPqK+3k3AcSCCJ9CD9OK46XSqjMyoEkAEYkkFjuMGCc880FXp7Do2quoysXg2z8QIliDjJ2hoj0is30HVFr96/duqj7GC3DGHJWIEQYGIjjgGt5d0qMZIIPmpKk/OCJ+tUtn2R06uX8ZmfDI2j5QAf1oPloeE3NTbCvMLcUkKVInd4d20/2gJzgjtXXenbyWtox8W6NrKpllG0b4aAAfHHJ8hWqTRIh3Ki7gME8jEQCZIHyqN0jpzWg7XH3vcgu0QMTgf5j9+BQZrp3S3vFbe5ltqis5UmQWJYWxP4tpUk9p9RUm1pTptQbPvHS1dgo5M+PujE4k5jvxzWtVQOBFc9RYV1KOoZWEEGiaiafRurhnul1UGPCAxOeSBJAHrkn0rO2+qEgI6wIiUgMR9QVGMY+kVoum6O5aO1rvvLYHh3r/SDjBYGCOe05r3qOl2XO50G7uQSpPz2kTRUFNajWthtkW1AXLGYERkCQRAzIM1x6Xa05D7d7s5hkuMGMHAGfiXvJkirM9Jsxt2AesmfvM1D0fQwj7i24AmOQ0QRBj5jPpxmgptR0n3e99MB/RmblpxLIvMoZMrEnGTnJOK0fRrS+7R1ABZFB2ggYLNgdssfn9qrep9JuBt9glvTdDqe8MTkfWfnUN9LqVQBEuAjyaIA8hM/agudfoUUNcDBNuSGAKHIJxEgmIkenMAVE072UJvm0yuULjLOHnMo5xJnvByfWuvTUfUaZkus0ksoLDxCIiQYOCO+attPaCIqLwoCifICKDGIvvtd75DsRQC5YwAQsQCCJmRwRyaubV1P2hrxubiwC21JCgLCzlokFgcCTkT2q8a2pyVB+g/12rjrdCl0AXE3Rxkgj5EEHtQfWdwJKLwcKxJ+gIE/cV90rsUBfbJn4eCsnaeTkrB5NeH0uVZQCVjbuJkQCvMEkQ3GPnmu9tIAHkKD3SlKBSlKBSlKBXLUX1RWdzCqCxPoBNdag9Z0pu2LltfiZCB8+QP0ig+6U3LiB2YpuEqihSVU8biwMt3wABMZiT6tu6K5utuVTKsFzs2gncF7g7uBxFc+lar3lpY8LqoV1IyjgQQRzzn1FRrGrd01S3Ch92biDaCJASZMsfOPpQWFnWI5CgmWXcoIK7lxkSBPI4868f7QTx5bwGH8DeEwDnHkQfrVdo2IfT+9iPdD3TAQC5Vd6tJPi2gbexG7yx10KsX1G1gAL6lgR2CWicziQCOKCyv31SC7AbmVBPdmMAVzv65E3biwCRuO1iBIB5Ajgj71C6haa+HS3tICYJJw7Q6MMHKwp7fHXjqGqFzRPc43JJHkZAYH1BkfSgnXuoIgZn3KEAZiUbAMiePQ8cV0GpWSDIIBY7lK4HJkgDE1E9pP/AC1/+41d74ADi86lHG2IjENu7nEEZoPTa1Bzu4BHgbIJCiMZywxzmvLdQQb/AI/AJYbHkAiR+HyrhoN6P7i429Qm5LhEMACF2vGCciG7wfKvWk/r9R/7X/IaCcwkYMevl96gdD1L3Le+4wJ3OuBAGx2X9Y86sRVD7P6VHs7iXy934bjgf1jdlYAYoJmm1DnUXbbNKIqMBtEnfuwT5Db2runUEbK7j4mTCN8Szu7TiCJ4nFQem2wmq1CqT8Fnlix/H3Yk1I6J8D/41/8A6r0He3r0b4dxG7ZOxo3btpBMQM4r2mqRiACfFO0wdrRkwYjiT6xiofRmAtuTwLt8/a65rxo1ay6WlYPZcMU/MgA3ASPiSDAPIwM0FhqdSttd1wkCQJAJySAOAeSQPrXWe9V3Xv6n/wByz/1kqyoIf+0rew3JbYG2k7G+LdtiIn4sfOpYNZ9j/ub/AOM//wCya0J5oIn7cu7bBw4QtiA5UOF5ngjMRmpU1nFO5f2tCPehjut4hoJTZHa6FwG5kx8JirTpexx79dpa5mREgAYTzlQMjzk0EnUapU2758TBVhSZY8DAoNWhdkE7lAZhtbAMweIMwePKo3Vf/R/xrf7mr5pv/NXf8Oz/AM12gl6bULcQPbJKngkET9xNdqr+gH/drX9wfvNWFApSlApSlBxu6VHMuiMfNlBP6ii6dAu0IoX8oUR9oiu1KDkbCbduxdv5YEefHFdbXS0YGFtfCzEFRIVeSfD6cc0qToHVS+5gJR1HOSwgcA0EY6VUnaqwYkqMGRMHGTniuf7EsR7tdszGwRPnEc1Ot3VFsKYJ3zB3YG0CcR5V31N9WDQ4zcutPjna+yIxGdpEHzoICaAOhkJtUqIbgFp29oAwc9q5PoVQkG2qkSp8I84ZeMiRU7T3QttxI3FrZCkEzt3z2j8Qwa+3bgdU3uN25yxIaZYgzgd80EGzpwoi2gAx8Kx8uBRNKFJYIATyQsE98mKtU1Sb7bbtoUlSDJ8CmUOBn4ivngVx02o2ovjhg7HvjwbQePMUEI29wgrIM9pBHevFvTKmUQKD3VQJ+w9asl1CeEjwSLoYQdqs6BARH4Scx2z6V5095VwzSuzY0TkM8mMcgZ+YoK1dKgO4IoOc7RPrmKkWunhYUBELx4YiQRiYECQfxRg+VdtW6lEVTO3cIg8Tg/XJrprHS4+/eF3bdwIMqQADEDIxI/hQV9rThQSiBR3hYH1ilrSqhhECk/lWCRz2FWS6hA6uD4Qm0pn8mwjygtmZ7+dFuLvD7xAQLw3Putn5fzUFc+nDjxIGHqsiva2iRhTHGBjyipaOot7N6yWn8eAUiRAzFfNTdDMXR9oKgBcyBAGziIEefbzxQQP2FYj3SxzGwRPnxXRUgCBA4EDHyqcb43nx491t7/F7n3ccfmxNH1C73cHwshUJnBKbQOIhWgz/AGR3oKwaRA5cIofu20bvqYmvlvTIrFlRFZviYKAT8yBJq01GoVg8mXgAMJh13KYb1EYPcY7CYNBzuWVaN6q0cSAY+9fP2dJJ2LJ5O0SfnjNdaUHi3bVRCqFHkAAP0r3SlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlB9pSlApSlApSlApSlApSlApSlApSlApSlApSlApSlApSlB9r5SlApSlApSlApSlB//Z"
-                      width="40"
-                      height="40"
-                      alt=""
-                  /></span>
-                  We Will Rock You - Remastered 2011</a
-                >
-                <span class="info-1 m-5">1,013238,111</span>
-                <span class="info-1 m-5">3:25</span>
-              </li>
-              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
-                <a class="text-white mt-4 mb-2 mr-5">
-                  <span
-                    ><img
-                      src="https://cdns-images.dzcdn.net/images/cover/8b8fc5d117f9357b79f0a0a410a170e8/500x500.jpg"
-                      width="40"
-                      height="40"
-                      alt=""
-                  /></span>
-                  Another One Bites The Dust - Remastered 2011</a
-                >
-                <span class="info-1 m-5">1,013238,111</span>
-                <span class="info-1 m-5">3:25</span>
-              </li>
-              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
-                <a class="text-white mb-2">
-                  <span
-                    ><img
-                      src="https://angartwork.akamaized.net/webp/?id=42063425&size=296"
-                      width="40"
-                      height="40"
-                      alt=""
-                  /></span>
-                  Bohemian Rhapsody- Remastered 2011</a
-                >
-                <span class="info-1 m-5">1,013238,111</span>
-                <span class="info-1 m-5">3:25</span>
-              </li>
-              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
-                <a class="text-white mb-2">
-                  <span
-                    ><img
-                      src="https://i.scdn.co/image/ab67616d0000b273008b06ec71019afd70153889"
-                      width="40"
-                      height="40"
-                      alt=""
-                  /></span>
-                  Don't Stop Me Now - Remastered 2011</a
-                >
-                <span class="info-1 m-5">1,013238,111</span>
-                <span class="info-1 m-5">3:25</span>
-              </li>
-              <li class="list-group-playing mt-4 ml-3 pt-2 p-0">
-                <a class="text-white mb-2">
-                  <span
-                    ><img
-                      src="https://i.kfs.io/album/global/4768388,0v1/fit/500x500.jpg"
-                      width="40"
-                      height="40"
-                      alt=""
-                  /></span>
-                  Under Pressure - Remastered 2011</a
-                >
-                <span class="info-1 m-5">1,013238,111</span>
-                <span class="info-1 m-5">3:25</span>
-              </li>
-            </ol>
+            <div class="row">
+            <div class="col-9">
+            <table class="table table-borderless text-light">
+              <thead>
+                <tr>
+                  <th class="t-h" scope="col">#</th>
+                  <th class="t-h" scope="col">Title</th>
+                  <th class="t-h" scope="col">ALBUM</th>
+                  <th class="t-h" scope="col">DATE ADDED</th>
+                  <th class="t-h" scope="col"><img src="./images/icons8-clock-32.png" width="20" height="20" alt=""></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td id='test' ><img class="pr-2" src="./images/Wizkid.jpeg" width="50" alt=""> Blessed - Wizkid ft Darmian Marley</td>
+                  <td>Made In Lagos</td>
+                  <td>16 hours ago</td>
+                  <td>4:22</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td><img class="pr-2" src="./images/DS2.jpeg" width="50" alt=""> F*uck Up Some Commas - Future</td>
+                  <td>DS2</td>
+                  <td>3 months ago</td>
+                  <td>3:17</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td><img class="pr-2" src="./images/A better time.jpeg" width="50"alt=""> FEM - Davido</td>
+                  <td>A Better Time</td>
+                  <td>3 months ago</td>
+                  <td>3:17</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td><img class="pr-2" src="./images/Blacc hollywood.jpg" width="50" alt=""> Blac N Yellow - Wiz Khalifa</td>
+                  <td>Blacc Hollywood</td>
+                  <td>3 months ago</td>
+                  <td>3:17</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td><img class="pr-2" src="./images/Rather You Than Me.jpeg" width="50" alt=""> Amsterdam - Rick Ross</td>
+                  <td>Rather You Than Me</td>
+                  <td>4 years ago</td>
+                  <td>3:17</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td><img class="pr-2" src="./images/Burna Boy.jpeg" width="50" alt=""> Wetin Man Go Do - Burna Boy</td>
+                  <td>African Giant</td>
+                  <td>1 year ago</td>
+                  <td>3:17</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td><img class="pr-2" src="./images/Meek_Mill_–_Championships.png" width="50" alt=""> Championships - Meek Mill</td>
+                  <td>Championships</td>
+                  <td>3 years ago</td>
+                  <td>3:17</td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td><img class="pr-2" src="./images/High Tension.jpeg" width="50"alt=""> Vision 2020 - Bella Shumrda</td>
+                  <td>High Tension</td>
+                  <td>1 months ago</td>
+                  <td>3:17</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+            <div class="col-3">
+              <h5>Artist pick</h5>
+              <img
+                src="https://images.genius.com/30a049d2de687550227ba815650eb196.300x300x1.png"
+                widh="75"
+                height="75"
+                alt=""
+              />
+              <span>
+                <img
+                  src="https://m.media-amazon.com/images/I/71FooDQq7RL._SS500_.jpg"
+                  widh="15"
+                  height="15"
+                  style="border-radius: 50%"
+                />
+                posted by Queen</span
+              >
+            </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -645,7 +657,7 @@
               x="0px"
               y="0px"
               width="20"
-              height="20"
+              height="17"
               viewBox="0 0 172 172"
               style="fill: #000000"
             >
@@ -680,8 +692,8 @@
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
               y="0px"
-              width="20"
-              height="20"
+              width="17"
+              height="17"
               viewBox="0 0 172 172"
               style="fill: #000000"
             >
@@ -716,7 +728,7 @@
               x="0px"
               y="0px"
               width="35"
-              height="40"
+              height="35"
               viewBox="0 0 172 172"
               style="fill: #000000"
             >
@@ -752,7 +764,7 @@
               x="0px"
               y="0px"
               width="20"
-              height="20"
+              height="17"
               viewBox="0 0 172 172"
               style="fill: #000000"
             >
@@ -781,43 +793,9 @@
               </g>
             </svg>
 
-            <svg
-              id="repeat-button"
-              class="ml-1"
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              width="20"
-              height="20"
-              viewBox="0 0 172 172"
-              style="fill: #000000"
-            >
-              <g transform="">
-                <g
-                  fill="none"
-                  fill-rule="nonzero"
-                  stroke="none"
-                  stroke-width="1"
-                  stroke-linecap="butt"
-                  stroke-linejoin="miter"
-                  stroke-miterlimit="10"
-                  stroke-dasharray=""
-                  stroke-dashoffset="0"
-                  font-family="none"
-                  font-weight="none"
-                  font-size="none"
-                  text-anchor="none"
-                  style="mix-blend-mode: normal"
-                >
-                  <path d="M0,172v-172h172v172z" fill="none"></path>
-                  <g fill="#cccccc">
-                    <path
-                      d="M105.2425,15.8025l-17.2,17.2l-4.945,4.8375l4.945,4.8375l17.2,17.2l9.675,-9.675l-5.4825,-5.4825h24.725c1.98875,0 3.44,1.45125 3.44,3.44v75.68c0,1.98875 -1.45125,3.44 -3.44,3.44h-41.28v13.76h41.28c9.41969,0 17.2,-7.78031 17.2,-17.2v-75.68c0,-9.41969 -7.78031,-17.2 -17.2,-17.2h-24.725l5.4825,-5.4825zM37.84,30.96c-9.41969,0 -17.2,7.78031 -17.2,17.2v75.68c0,9.41969 7.78031,17.2 17.2,17.2h24.725l-5.4825,5.4825l9.675,9.675l17.2,-17.2l4.945,-4.8375l-4.945,-4.8375l-17.2,-17.2l-9.675,9.675l5.4825,5.4825h-24.725c-1.98875,0 -3.44,-1.45125 -3.44,-3.44v-75.68c0,-1.98875 1.45125,-3.44 3.44,-3.44h41.28v-13.76z"
-                    ></path>
-                  </g>
-                </g>
-              </g>
-            </svg>
+
+           
+            <img id="repeat-button" src="./images/icons8-repeat-30 (1).png" width="17" height="17" alt="">
             <span class="span-1">02:20</span>
             <hr class="duration-hr" />
             <span class="span-2">03:25</span>
@@ -830,8 +808,8 @@
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
-                width="20"
-                height="20"
+                width="15"
+                height="15"
                 viewBox="0 0 172 172"
                 style="fill: #000000"
               >
@@ -865,8 +843,8 @@
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
-                width="20"
-                height="20"
+                width="15"
+                height="15"
                 viewBox="0 0 172 172"
                 style="fill: #000000"
               >
@@ -900,8 +878,8 @@
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
                 y="0px"
-                width="20"
-                height="20"
+                width="15"
+                height="15"
                 viewBox="0 0 172 172"
                 style="fill: #000000"
               >
@@ -930,10 +908,11 @@
                 </g>
               </svg>
             </div>
-            <hr class="volume-hr" />
+            <div class="expand">
+            <hr class="volume-hr" /> 
+            <img id="expand" src="./images/icons8-enlarge-50.png" width="18" alt="">
           </div>
         </nav>
-      </div>
     </div>
 
     <script
