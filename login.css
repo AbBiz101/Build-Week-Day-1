@@ -3,22 +3,22 @@ body {
     margin: 0;
 }
 
-.nav {
+nav {
     min-height: 6vh;
-    background-color: black;
+    width: 100%;
+    margin: 0;
 }
 
 .header-icon {
-    min-height: 11vh;
+    min-height: 80px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .icon {
-    position: absolute;
+    /* position: absolute; */
     margin-left: 40%;
     margin-top: 7px;
-    
     height: 55px;
 }
 
