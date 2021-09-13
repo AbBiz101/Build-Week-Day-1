@@ -6,7 +6,7 @@ document.querySelector('#btn-b4-follow').addEventListener('click', function () {
 	doc.classList.toggle('button-paused');
 });
 
-let currentMusic=0;
+let currentMusic = 0;
 const music = document.querySelector('#audio');
 const songname = document.querySelector('.Song-name');
 const artistname = document.querySelector('.artist-name');
@@ -17,7 +17,8 @@ const durationtime = document.querySelector('.duration-time');
 const backbtn = document.querySelector('#prev-button');
 const playbtn = document.querySelector('.play-button');
 const nextbtn = document.querySelector('#next-button');
-
+const volbnt = document.querySelector('.volume-hr');
+const volnum = document.querySelector('#vol-btn-1');
 
 playbtn.addEventListener('click', () => {
 	if (playbtn.className.includes('pause')) {
@@ -43,7 +44,6 @@ const setMusic = (i) => {
 		durationtime.innerHTML = formatTime(music.duration);
 	}, 300);
 };
-setMusic(10);
 
 const formatTime = (time) => {
 	let min = Math.floor(time / 60);
@@ -94,3 +94,14 @@ const playMusic = () => {
 	playbtn.classList.remove('pause');
 	disk.classList.add('play');
 };
+
+function volchange() {
+	volnum.innerHTML = volbnt.value;
+	music.volume = volbnt.value / 50;
+}
+
+function mute_sound() {
+	music.volume = 0;
+	document.querySelector('.volume-hr').value = 0;
+	volnum.innerHTML = 0;
+}
